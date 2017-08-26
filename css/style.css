@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+md-nav-bar md-nav-ink-bar {
+  background: white;
+}
+
+footer {
+  background-color: #ccc;
+  bottom: 0;
+  width: 100% ;
+  height: 90px;
+  clear: both;
+}
+
+.home-content{
+  /*background-image: url("../images/molecule-background.jpg");*/
+}
+
+.picture-credits{
+  font-size: 10px;
+  position: relative;
+  bottom: 25px;
+  left: 10px;
+  color: white;
+}
