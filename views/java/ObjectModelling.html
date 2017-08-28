@@ -1,0 +1,35 @@
+<div class="content-area">
+  <div layout="row" layout-xs="column">
+    <div flex-gt-sm="60" flex="100" flex-order-xs="2">
+      <h3>Object Modelling</h3>
+      <p>
+        How to divide a big problem into smaller pieces ? Every problem has set of
+        entities around which the problem is modelled. Identify the entities involved
+        in the use case. Identify the relationship between the entities involved. What
+        attributes are available to model the entity. Java models objects based on attributes
+        and behaviour. Object state is defined by the attributes. Understand which
+        attributes are mutable and which are immutable. Behaviour helps in encapsulating
+        the object state. Behaviour is defined via methods. The methods of the object
+        should encapsulate the logic, which may or may not depend on the state of the
+        object, but that should be belonging to the object if its related to it.
+      </p>
+      <p>
+        During object modelling we can categorize objects as REAL and META. Real
+        objects are the ones which we create to model real life entities in our
+        use case. Meta objects are created for managing the application effectively.
+      </p>
+      <p>
+        Assume that you want to create an application for managing a hotel. The
+        real entities in the application would be Customer,Table,Rooms,Food,
+        Manager,Waiter,etc. A web application of this use case would consist of
+        meta objects like DTOs,Controllers,Services,DAOs which help in managing
+        the application design and code effectively. In a way we can map the code
+        and understand it in terms of some objects.
+      </p>
+    </div>
+    <div flex-offset="5" flex-order-xs="1">
+      <img src="images/workspace.jpg" width="100%" alt="Workspace">
+    </div>
+  </div>
+
+</div>
