@@ -39,6 +39,6 @@ footer div{
   font-size: 10px;
   position: relative;
   bottom: 25px;
-  left: 10px;
-  color: grey;
+  right: 25%;
+  color: white;
 }
