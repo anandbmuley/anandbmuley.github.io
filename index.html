@@ -30,17 +30,14 @@
     <md-content class="md-padding">
       <md-toolbar class="md-medium-tall md-primary">
         <div class="md-toolbar-tools">
-          <h2 md-truncate flex>Applied Technology</h2>
+          <div md-truncate flex class="site-title">Applied Technology</div>
         </div>
       </md-toolbar>
       <md-nav-bar class="md-primary"
         md-selected-nav-item="currentNavItem"
         nav-bar-aria-label="navigation links">
-        <md-nav-item md-nav-click="goto('home')" name="home">
-          Home
-        </md-nav-item>
-        <md-nav-item md-nav-click="goto('java')" name="java">
-          Java
+        <md-nav-item ng-repeat="navlink in navigations" md-nav-click="goto(navlink.navUrl)" name="{{navlink.displayName}}">
+          {{navlink.displayName}}
         </md-nav-item>
       </md-nav-bar>
     </md-content>

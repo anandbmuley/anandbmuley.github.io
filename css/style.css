@@ -7,6 +7,12 @@ body{
   font-family: "Roboto";
 }
 
+.site-title{
+  padding-top: 3%;
+  font-size: 50px;
+  font-weight: lighter;
+}
+
 .content-area{
   margin-left: 10%;
   margin-right: 10%;
@@ -39,6 +45,6 @@ footer div{
   font-size: 10px;
   position: relative;
   bottom: 25px;
-  right: 25%;
-  color: white;
+  text-align: center;
+  color: gray;
 }

@@ -3,18 +3,11 @@ app.controller('JavaHomeController',['$scope','$location',
 
   $scope.topics = [
     {
-      'heading':'Object Oriented Programming',
+      'heading':'Object Oriented Design',
       'subHeading':'Thinking in terms of objects',
       'imageUrl':'object_oriented.jpg',
-      'pageName':'object-oriented',
+      'pageName':'object-oriented-design',
       'imageCredits' : 'Created by D3images - Freepik.com'
-    },
-    {
-      'heading':'Object Modelling',
-      'subHeading':'Learn to model',
-      'imageUrl':'object_modelling.jpg',
-      'pageName':'object-modelling',
-      'imageCredits':'Created by Vvstudio - Freepik.com'
     }
   ];
 

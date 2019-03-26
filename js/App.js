@@ -10,10 +10,10 @@ app.config(['$routeProvider',function($routeProvider){
   }).when('/java',{
     templateUrl:'views/java/JavaHome.html',
     controller : 'JavaHomeController'
-  }).when('/object-oriented',{
+  }).when('/object-oriented-design',{
     templateUrl:'views/java/ObjectOrientedProgramming.html'
-  }).when('/object-modelling',{
-    templateUrl:'views/java/ObjectModelling.html'
+  }).when('/about-me',{
+    templateUrl:'views/AboutMe.html'
   });
 
 }]);
