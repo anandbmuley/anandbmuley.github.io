@@ -1,13 +1,14 @@
-<div layout="row">
-  <md-card ng-repeat="topic in topics" ng-click="loadPage(topic.pageName)" flex="30" md-theme="default" md-theme-watch>
+<div layout="row" style="min-height:360px">
+  <md-card ng-repeat="topic in topics" ng-click="loadPage(topic.pageName)" flex="20" md-theme="default" md-theme-watch>
     <md-card-title layout="column">
       <md-card-title-text>
         <span class="md-headline">{{topic.heading}}</span>
         <span class="md-subhead">{{topic.subHeading}}</span>
       </md-card-title-text>
       <md-card-title-media>
-        <div class="md-media-sm card-media"></div>
-        <img width="200" ng-src="images/{{topic.imageUrl}}" alt="">
+        <div class="md-media-lg card-media">
+          <img ng-src="images/{{topic.imageUrl}}" alt="">
+        </div>
         <span class="picture-credits">{{topic.imageCredits}}</span>
       </md-card-title-media>
     </md-card-title>
