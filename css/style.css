@@ -25,6 +25,10 @@ md-nav-bar md-nav-ink-bar {
   background: white;
 }
 
+md-card:hover{
+  cursor: pointer;
+}
+
 footer {
   background-color: #ccc;
   bottom: 0;
