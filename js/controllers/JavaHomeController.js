@@ -8,6 +8,13 @@ app.controller('JavaHomeController',['$scope','$location',
       'imageUrl':'object_oriented.jpg',
       'pageName':'object-oriented-design',
       'imageCredits' : 'Created by D3images - Freepik.com'
+    },
+    {
+      'heading':'Let code do the talking',
+      'subHeading':'Thinking in terms of objects',
+      'imageUrl':'laptop.jpg',
+      'pageName':'let-code-do-the-talking',
+      'imageCredits' : 'Created by fullvector - Freepik.com'
     }
   ];
 
