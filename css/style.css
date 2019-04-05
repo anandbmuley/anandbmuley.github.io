@@ -91,12 +91,10 @@ footer div{
 
 .story-explaination-title{
   color: #2b387c;
-  /* font-weight: 400; */
   font-style: normal;
   font-family: "Roboto";
 }
 
 .story-explaination ol li{
-  /* color: #2b387c; */
   padding-bottom: 5%;
 }
