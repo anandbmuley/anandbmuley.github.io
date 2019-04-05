@@ -12,6 +12,11 @@ app.config(['$routeProvider',function($routeProvider){
     controller : 'JavaHomeController'
   }).when('/object-oriented-design',{
     templateUrl:'views/java/ObjectOrientedProgramming.html'
+  }).when('/let-code-do-the-talking',{
+    templateUrl:'views/java/let-code-do-the-talking/Home.html',
+    controller : 'LetCodeDoTheTalking'
+  }).when('/let-code-do-the-talking/domain-modelling',{
+    templateUrl : 'views/java/let-code-do-the-talking/DomainModelling.html'
   }).when('/about-me',{
     templateUrl:'views/AboutMe.html'
   });
