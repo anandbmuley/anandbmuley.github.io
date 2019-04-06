@@ -8,18 +8,20 @@
       most of the bugs during compilation phase. Most of the times I have seen that
       business rules and use cases are not properly coded by the developer hence
       looking at the code we could not deduce the actual business case. I always believe
-      that <b>"Let Code Do The Talking"</b>. If we write a good code then we need not
+      <b>"Let Code Do The Talking"</b>. If we write a good code then we need not
       document anything separately.
     </p>
     <p>
-      Below are some of the use cases to better understand <span class="text-enhancer">How to Let Code Do the Talking ?</span>
+      Below are some of the use cases to better understand <span class="text-enhancer">How to Let Code Do the
+        Talking ?</span>
     </p>
     <div layout="row" class="content-area">
-      <md-card ng-repeat="case in useCases" ng-click="loadPage(case.route)" flex="23" md-theme="default" md-theme-watch>
+      <md-card ng-repeat="case in useCases" ng-click="loadPage(case.route)" flex="23" md-theme="default"
+          md-theme-watch>
         <md-card-title layout="column">
           <md-card-title-text>
-            <span class="md-headline">{{case.name}}</span>
-            <span class="md-subhead">{{case.subHeading}}</span>
+              <span class="md-headline">{{case.name}}</span>
+              <span class="md-subhead">{{case.subHeading}}</span>
           </md-card-title-text>
           <md-card-title-media>
             <div class="md-media-lg card-media">
