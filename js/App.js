@@ -17,7 +17,10 @@ app.config(['$routeProvider',function($routeProvider){
     controller : 'LetCodeDoTheTalking'
   }).when('/let-code-do-the-talking/domain-modelling',{
     templateUrl : 'views/java/let-code-do-the-talking/DomainModelling.html'
-  }).when('/about-me',{
+  }).when('/objects-vs-classes',{
+    templateUrl : 'views/java/ObjectsVsClasses.html'
+  })
+  .when('/about-me',{
     templateUrl:'views/AboutMe.html'
   });
 

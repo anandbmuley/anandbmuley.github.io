@@ -27,6 +27,20 @@ body{
   font-family: "Roboto";
 }
 
+.page-subtitle-h4{
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Roboto";
+  color: #4e64d8;
+}
+
+.page-subtitle-grey{
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Roboto";
+  color: #9ca1bc;
+}
+
 .story-title{
   font-weight: 500;
   font-style: normal;
@@ -76,6 +90,16 @@ footer div{
   font-size: 10px;
   position: relative;
   bottom: 25px;
+  text-align: center;
+  color: gray;
+  width: 65%;
+}
+
+.picture-credits-img{
+  font-size: 10px;
+  position: relative;
+  bottom: 25px;
+  right: 90px;
   text-align: center;
   color: gray;
   width: 65%;

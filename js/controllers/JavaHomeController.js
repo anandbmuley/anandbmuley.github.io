@@ -15,6 +15,13 @@ app.controller('JavaHomeController',['$scope','$location',
       'imageUrl':'laptop.jpg',
       'pageName':'let-code-do-the-talking',
       'imageCredits' : 'Created by fullvector - Freepik.com'
+    },
+    {
+      'heading':'Objects vs Classes',
+      'subHeading':'Which one to use when',
+      'imageUrl':'ObjectsVsClasses.png',
+      'pageName':'objects-vs-classes',
+      'imageCredits' : 'Created by alekksall - www.freepik.com'
     }
   ];
 
