@@ -8,10 +8,9 @@ body{
 }
 
 .story-container{
-  border: solid 1px #7280ce;
   padding: 2%;
-  background-color: #7280ce;
-  color: white;
+  color: black;
+  border-radius: 5px;
 }
 
 .page-title{
