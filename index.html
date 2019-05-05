@@ -23,11 +23,12 @@
 
 <script type="text/javascript" src="js/controllers/NavigationController.js"></script>
 <script type="text/javascript" src="js/controllers/HomePageController.js"></script>
+<script type="text/javascript" src="js/controllers/LandingPageController.js"></script>
 <script type="text/javascript" src="js/controllers/JavaHomeController.js"></script>
 <script type="text/javascript" src="js/controllers/LetCodeDoTheTalkingController.js"></script>
 </head>
 <body>
-  <div ng-controller="NavigationController" ng-cloak>
+  <div ng-if="!isLandingPage" ng-controller="NavigationController" ng-cloak>
     <md-content class="md-padding">
       <md-toolbar class="md-medium-tall md-primary">
         <div class="md-toolbar-tools">
@@ -46,7 +47,7 @@
   <div class="md-padding" ng-view class="site-content">
 
   </div>
-  <footer>
+  <footer ng-if="!isLandingPage" ng-controller="NavigationController">
        <div layout="row" layout-align="center">
          &copy;Anand Muley
        </div>
