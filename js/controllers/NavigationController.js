@@ -1,6 +1,8 @@
-app.controller('NavigationController',['$scope','$location',function($scope,$location){
+app.controller('NavigationController',['$scope','$location','$rootScope',
+          function($scope,$location,$rootScope){
 
   $scope.currentNavItem = 'home';
+  $rootScope.isLandingPage = true;
 
   $scope.navigations = [
     {
@@ -18,6 +20,7 @@ app.controller('NavigationController',['$scope','$location',function($scope,$loc
   ];
 
   $scope.goto = function(pageName){
+    $rootScope.isLandingPage = false;
     $location.path(pageName);
   }
 
