@@ -2,7 +2,16 @@ app.controller('NavigationController',['$scope','$location','$rootScope',
           function($scope,$location,$rootScope){
 
   $scope.currentNavItem = 'home';
-  $rootScope.isLandingPage = true;
+
+  function identifyUrl(){
+    if($location.url() === '/'){
+      $rootScope.isLandingPage = true;
+    } else {
+      $rootScope.isLandingPage = false;
+    }
+  }
+
+  identifyUrl();
 
   $scope.navigations = [
     {

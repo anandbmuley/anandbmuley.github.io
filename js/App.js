@@ -6,7 +6,8 @@ app.config(['$routeProvider',function($routeProvider){
     templateUrl:'views/LandingPage.html',
     controller : 'LandingPageController'
   }).when('/home',{
-    redirectTo : '/'
+    templateUrl: 'views/HomePage.html',
+    controller : 'HomePageController'
   }).when('/java',{
     templateUrl:'views/java/JavaHome.html',
     controller : 'JavaHomeController'
