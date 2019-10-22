@@ -1,0 +1,100 @@
+<div class="content-area-compact">
+    <div align="center">
+        <h2 class="page-title">Design Patterns is a Fish & Learning to Design is Fishing</h2>
+        <img class="round-corner" src="images/DesignPatternIsAFish.jpeg" alt="">
+        <div class="picture-credits-dark">Created by rawpixel.com - www.freepik.com</div>
+    </div>
+    <p class="justified-content">
+        <i style="font-size: medium;">
+            Disclaimer : The content of this blog are my views, observations and understanding about the topic. I do not intend to undermine anything. I am simply giving my perspective about it. This will help you to look at the topic from a different angle.
+        </i>
+    </p>
+    <p class="justified-content">
+        <div align="center" style="font-weight: bold;">
+            Give a man a fish, and you'll feed him for a day. Teach a man to fish, and you've fed him for a lifetime
+        </div>
+    </p>
+    <h3 class="page-subtitle">Introduction</h3>
+    <p class="justified-content">
+        We tend to request for help from our colleagues. If they offer a help as per this saying then we will be ideally independent. But it is up-to us as well, to learn on our own and make an earnest attempt to be independent. Self Learning is best to gain in depth understanding of something. I think Design Patterns might have been shared with an intent of not reinventing the same wheel and quickly using them based on our use cases. On spending enough time in Software Industry I observed that Design Patterns are treated like a Holy Grail of effective Software Development. We should learn to design a code effectively which is AGILE enough to adapt to the changing requirement.
+    </p>
+    <p class="justified-content">
+        One fine day I was working on a code wherein I wanted to separate the how different messages are structured, built and formatted and how they are sent to other system. I was using the usual json formatter library FasterXML - Jackson. I will explain you briefly what I intended to do and how I did it without the knowledge of a Design Pattern.
+    </p>
+    <p class="justified-content">
+        Consider that you have to send messages to a system which are having different structure like shown below :
+    </p>
+    <div align="center">
+        <img class="round-corner" src="images/design-pattern-is-fish/CustomerDetails.png" alt="">
+        <img class="round-corner" src="images/design-pattern-is-fish/CustomerAddressDetails.png" alt="">
+    </div>
+      
+    <p class="justified-content">
+        You have to restrict the Developer that they should use a pre-defined and pre-configured Object Mapper. Moreover the basic skeleton code should be abstracted so that developer can focus only on adding new messages with different structure. A typical enterprise application fetches the data from various data sources and maps them. Hence assume that the data is already mapped in some other POJO and we have to extract the relevant data as per our need. I created an abstract class which will have all the skeleton code. Which looks something like this :
+    </p>
+
+    <div align="center">
+        <img class="round-corner" src="images/design-pattern-is-fish/FormattableMessage.png" alt="">
+    </div>
+
+    <p class="justified-content">
+        I wanted that map should be called before calling writeValueAsString method and wanted that the implementation of the map method will be specific to each message mapper. I was having the knowledge of behavioural abstraction using interfaces but our requirement needed us to ensure that order of call to map method and writeValueAsString method is preserved. Also configuring the ObjectMapper instance as per our need. He I chose an abstract class over interface. Moreover the concept of abstraction using abstract class is to have some abstract entity which will have some state and behaviour which is shared across its children. Interfaces are pure behavioural abstraction hence should be used in those cases only.
+    </p>
+
+    <p class="justified-content">
+        Please note below points about this class design :
+        <ul>
+            <li>
+                Its <span class="text-enhancer">abstract</span> which means you cannot create instances out of it
+            </li>
+            <li>
+                <span class="text-enhancer">ObjectMapper</span> instance variable if <span class="text-enhancer">final</span> which means you cannot change that to some other instance anywhere else in the code, once its configured in the constructor of this class
+            </li>
+            <li>
+                <span class="text-enhancer">Map</span> method is <span class="text-enhancer">abstract</span> and <span class="text-enhancer">protected</span> ( inheritable ) so that it should be implemented by child classes only and would be accessible in the same package. It will ensure that outside code which lies beyond this package ( a modular approach) would not be able to call the method. We could not make it private otherwise it cannot be overridden. We did not make it package private so that in future we can separate the messages in a different package.
+            </li>
+            <li>
+                <span class="text-enhancer">Format</span> method is <span class="text-enhancer">final</span> and it calls the map method before calling the object mapper to convert the pojo to a JSON string. It takes the instance reference as itself ( i.e this ). The method is package private so that it should be called from the same package. Ideally used by the Messenger class
+            </li>
+        </ul>
+    </p>
+
+    <div align="center">
+        <img class="round-corner" src="images/design-pattern-is-fish/Messenger.png" alt="">
+    </div>
+
+    <p class="justified-content">
+        That's it ! Now we could easily create messages as per the structure needed by the DestinationSystem. Below are some examples for reference simply to explain how you can use this effectively :
+    </p>
+
+    <div align="center">
+        <img class="round-corner" src="images/design-pattern-is-fish/CustomerClass.png" alt="">
+    </div>
+
+    <p class="justified-content">
+        I was checking some of the Behavioural Design Patterns & I stumbled upon the <span class="text-enhancer">Template Method Design Pattern</span> - 
+        Template Method is a behavioural design pattern that allows you to defines a skeleton of an algorithm in a base 
+        class and let sub-classes override the steps without changing the overall algorithm's structure. 
+        The <span class="text-enhancer">FormattableMessage</span> is a flavour of this pattern. But in addition to behaviour it also has state for achieving the 
+        behaviour. It is having a simple algorithm to map and then format. The Developer is free to map details as per the 
+        requirement.
+    </p>
+
+    <p class="justified-content">
+        I concluded that if we have strong fundamentals about a language and are clear about what we want to achieve 
+        with effective designing skills then we need not rely on the Design Patterns much. Knowing a Design Pattern is 
+        good. Understanding it and various uses cases of the same will help you. But if you totally dependent on it then 
+        you may not <span class="text-enhancer">learn to Design a Pattern</span> and will have limited vocabulary of Patterns which you are aware of. 
+        One fine day you may be the one who creates anti-pattern.
+    </p>
+
+    <p class="justified-content">
+        Knowledge is camouflaged. All you do is explore it with your inquisitive mind.
+    </p>
+
+    <div align="center">
+        <img class="round-corner" src="images/design-pattern-is-fish/KeepThinking.jpeg" alt="">
+        <h3>KEEP THINKING !</h3>
+    </div>
+
+</div>
