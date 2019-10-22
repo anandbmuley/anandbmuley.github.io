@@ -22,6 +22,13 @@ app.controller('JavaHomeController',['$scope','$location',
       'imageUrl':'ObjectsVsClasses.png',
       'pageName':'objects-vs-classes',
       'imageCredits' : 'Created by alekksall - www.freepik.com'
+    },
+    {
+      'heading':'Design Patterns is a Fish',
+      'subHeading':'Choose Wisely',
+      'imageUrl':'DesignPatternIsAFish.jpeg',
+      'pageName':'design-patterns-is-fish',
+      'imageCredits' : 'Created by brgfx - www.freepik.com'
     }
   ];
 

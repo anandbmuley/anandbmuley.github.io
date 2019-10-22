@@ -17,9 +17,12 @@ app.config(['$routeProvider',function($routeProvider){
     templateUrl:'views/java/let-code-do-the-talking/Home.html',
     controller : 'LetCodeDoTheTalking'
   }).when('/let-code-do-the-talking/domain-modelling',{
-    templateUrl : 'views/java/let-code-do-the-talking/DomainModelling.html'
+    templateUrl : 'views/java/let-code-do-the-talking/DomainModelling.html',
+    controller: 'LetCodeDoTheTalking'
   }).when('/objects-vs-classes',{
     templateUrl : 'views/java/ObjectsVsClasses.html'
+  }).when('/design-patterns-is-fish',{
+    templateUrl: 'views/java/research/DesignPatternsIsAFish.html'
   })
   .when('/about-me',{
     templateUrl:'views/AboutMe.html'

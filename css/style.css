@@ -7,6 +7,10 @@ body{
   font-family: "Roboto";
 }
 
+.round-corner {
+  border-radius: 5px;
+}
+
 .landing-page-body {
   background-color: rgb(63,81,181);
   color: white;
@@ -77,6 +81,14 @@ body{
   font-weight: lighter;
 }
 
+.content-area-compact{
+  margin-left: 6%;
+  margin-right: 6%;
+  font-size: 20px;
+  /*font-family: "Open Sans script=all rev=1";*/
+  min-height: 330px;
+}
+
 .content-area{
   margin-left: 3%;
   margin-right: 3%;
@@ -131,6 +143,22 @@ footer div{
   text-align: center;
   color: gray;
   width: 65%;
+}
+
+.picture-credits-dark{
+  font-size: 10px;
+  position: relative;
+  bottom: 25px;
+  text-align: center;
+  color: black;
+}
+
+.picture-credits-small{
+  font-size: 8px;
+  position: relative;
+  bottom: 25px;
+  text-align: center;
+  color: black;
 }
 
 .text-enhancer{

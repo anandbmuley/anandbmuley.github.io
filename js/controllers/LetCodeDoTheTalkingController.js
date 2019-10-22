@@ -13,6 +13,8 @@ app.controller('LetCodeDoTheTalking',['$scope','$location',
     }
   ];
 
+  window.scrollTo(0,0);
+
   $scope.loadPage = function (pageName){
     $location.path(pageName);
   }
