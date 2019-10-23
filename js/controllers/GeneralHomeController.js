@@ -18,7 +18,7 @@ app.controller('GeneralHomeController',['$scope','$location',
     },
     {
       'heading':'Charity at Workplace',
-      'subHeading':'A help and forget that you helped',
+      'subHeading':'Help and forget that you helped',
       'imageUrl':'Charity.jpeg',
       'route':'general/charity-at-workplace',
       'imageCredits' : 'Created by Freepik - www.freepik.com'

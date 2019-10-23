@@ -48,6 +48,18 @@ body{
   font-family: "Roboto";
 }
 
+.gray-border{
+  border: solid 1px rgb(185, 185, 185);
+  border-radius: 5px;
+}
+
+.sub-heading {
+  color: rgb(111, 112, 114);
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Roboto";
+}
+
 .page-subtitle{
   font-weight: 500;
   font-style: normal;

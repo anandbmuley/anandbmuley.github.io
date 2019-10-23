@@ -4,7 +4,7 @@ app.controller('ResearchHomeController',['$scope','$location',
   $scope.topics = [
     {
       'heading':'History of Programming Paradigm',
-      'subHeading':'A change is gradual',
+      'subHeading':'Peek at Gradual Change',
       'imageUrl':'Programming.jpeg',
       'route':'research/history-of-programming-paradigm',
       'imageCredits' : 'Created by Freepik - www.freepik.com'

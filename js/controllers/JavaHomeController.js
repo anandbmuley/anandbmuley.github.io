@@ -11,7 +11,7 @@ app.controller('JavaHomeController',['$scope','$location',
     },
     {
       'heading':'Let code do the talking',
-      'subHeading':'Thinking in terms of objects',
+      'subHeading':'Code speaks for itself',
       'imageUrl':'laptop.jpg',
       'route':'/java/let-code-do-the-talking',
       'imageCredits' : 'Created by fullvector - Freepik.com'
