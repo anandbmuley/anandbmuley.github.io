@@ -23,6 +23,14 @@ app.controller('NavigationController',['$scope','$location','$rootScope',
       navUrl      : "java"
     },
     {
+      displayName : "General",
+      navUrl      : "general"
+    },
+    {
+      displayName : "Research",
+      navUrl      : "research"
+    },
+    {
       displayName : "About Me",
       navUrl      : "about-me"
     }

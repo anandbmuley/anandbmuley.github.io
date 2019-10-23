@@ -5,7 +5,7 @@ app.controller('LetCodeDoTheTalking',['$scope','$location',
     {
       'name' : 'Domain Modelling',
       'subHeading' : 'Model the reality',
-      'route' : 'let-code-do-the-talking/domain-modelling',
+      'route' : '/java/let-code-do-the-talking/domain-modelling',
       'imageName' : 'virtual-reality.jpg',
       'imageCredits' : 'katemangostar - www.freepik.com',
       'altText' : 'Virtual Reality',
