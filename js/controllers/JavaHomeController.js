@@ -19,7 +19,7 @@ app.controller('JavaHomeController',['$scope','$location',
     {
       'heading':'Objects vs Classes',
       'subHeading':'Which one to use when',
-      'imageUrl':'ObjectsVsClasses.png',
+      'imageUrl':'ObjectsVsClasses.jpg',
       'route':'/java/objects-vs-classes',
       'imageCredits' : 'Created by alekksall - www.freepik.com'
     },
