@@ -11,6 +11,9 @@ app.config(['$routeProvider',function($routeProvider){
   }).when('/java',{
     templateUrl:'views/java/JavaHome.html',
     controller : 'JavaHomeController'
+  }).when('/code',{
+    templateUrl : 'views/code/CodeHome.html',
+    controller : 'CodeHomeController'
   }).when('/research',{
     templateUrl : 'views/research/ResearchHome.html',
     controller: 'ResearchHomeController'
