@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html ng-app="AppTech" ng-cloak>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Applied Technology</title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300' rel='stylesheet' type='text/css'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Applied Technology</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300' rel='stylesheet' type='text/css'>
 
-<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
-<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
-<!-- Angular Material -->
-<link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.min.css"/>
-<script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
-<script type="text/javascript" src="bower_components/angular-aria/angular-aria.min.js"></script>
-<script type="text/javascript" src="bower_components/angular-messages/angular-messages.min.js"></script>
-<script type="text/javascript" src="bower_components/angular-material/angular-material.min.js"></script>
-<!-- Angular Material -->
+  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+  <!-- Angular Material -->
+  <link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.min.css" />
+  <script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-aria/angular-aria.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-messages/angular-messages.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-material/angular-material.min.js"></script>
+  <!-- Angular Material -->
 
-<script type="text/javascript" src="js/App.js"></script>
+  <script type="text/javascript" src="js/App.js"></script>
 
-<script type="text/javascript" src="js/controllers/NavigationController.js"></script>
-<script type="text/javascript" src="js/controllers/HomePageController.js"></script>
-<script type="text/javascript" src="js/controllers/LandingPageController.js"></script>
-<script type="text/javascript" src="js/controllers/JavaHomeController.js"></script>
-<script type="text/javascript" src="js/controllers/LetCodeDoTheTalkingController.js"></script>
-<script type="text/javascript" src="js/controllers/GeneralHomeController.js"></script>
-<script type="text/javascript" src="js/controllers/ResearchHomeController.js"></script>
-<script type="text/javascript" src="js/controllers/ScrollToTopController.js"></script>
+  <script type="text/javascript" src="js/controllers/NavigationController.js"></script>
+  <script type="text/javascript" src="js/controllers/HomePageController.js"></script>
+  <script type="text/javascript" src="js/controllers/LandingPageController.js"></script>
+  <script type="text/javascript" src="js/controllers/JavaHomeController.js"></script>
+  <script type="text/javascript" src="js/controllers/LetCodeDoTheTalkingController.js"></script>
+  <script type="text/javascript" src="js/controllers/GeneralHomeController.js"></script>
+  <script type="text/javascript" src="js/controllers/ResearchHomeController.js"></script>
+  <script type="text/javascript" src="js/controllers/ScrollToTopController.js"></script>
 
-<script data-ad-client="ca-pub-6581594310687705" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script async src="//pagead2.googlesyndication.com/
-pagead/js/adsbygoogle.js"></script>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({
-google_ad_client: "pub-6581594310687705",
-enable_page_level_ads: true
-});
-</script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156584278-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-156584278-1');
+  </script>
+
+
 </head>
+
 <body ng-class="{ 'landing-page-body' : isLandingPage }">
   <div ng-if="!isLandingPage" ng-controller="NavigationController" ng-cloak>
     <md-content class="md-padding">
@@ -48,23 +55,22 @@ enable_page_level_ads: true
           <div md-truncate flex class="site-title">Applied Technology</div>
         </div>
       </md-toolbar>
-      <md-nav-bar class="md-primary"
-        md-selected-nav-item="currentNavItem"
-        nav-bar-aria-label="navigation links">
+      <md-nav-bar class="md-primary" md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
         <md-nav-item ng-repeat="navlink in navigations" md-nav-click="goto(navlink.navUrl)" name="{{navlink.displayName}}">
           {{navlink.displayName}}
         </md-nav-item>
       </md-nav-bar>
-      
+
     </md-content>
   </div>
   <div class="md-padding" ng-view class="site-content">
 
   </div>
   <footer ng-if="!isLandingPage" ng-controller="NavigationController">
-       <div layout="row" layout-align="center">
-         &copy;Anand Muley
-       </div>
-   </footer>
+    <div layout="row" layout-align="center">
+      &copy;Anand Muley
+    </div>
+  </footer>
 </body>
+
 </html>
