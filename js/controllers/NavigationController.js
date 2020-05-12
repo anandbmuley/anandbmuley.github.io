@@ -31,6 +31,10 @@ app.controller('NavigationController',['$scope','$location','$rootScope',
       navUrl      : "research"
     },
     {
+      displayName : "CODE",
+      navUrl      : "code"
+    },
+    {
       displayName : "About Me",
       navUrl      : "about-me"
     }
