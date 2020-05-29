@@ -1,6 +1,5 @@
 @charset "UTF-8";
-
-body{
+body {
   font-size: 20px;
   font-weight: 300;
   font-style: normal;
@@ -12,43 +11,43 @@ body{
 }
 
 .landing-page-body {
-  background-color: rgb(63,81,181);
+  background-color: rgb(63, 81, 181);
   color: white;
 }
 
-.landing-page-container{
+.landing-page-container {
   text-align: center;
   padding-top: 10%;
 }
 
-.landing-page-container .site-title{
+.landing-page-container .site-title {
   font-size: 80px;
   font-weight: bold;
   margin-bottom: 3%;
-  color:black;
+  color: black;
 }
 
-.site-author{
+.site-author {
   font-size: 40px;
   color: white;
   margin-top: 2%;
   font-weight: 400;
 }
 
-.story-container{
+.story-container {
   padding: 2%;
   color: black;
   border-radius: 5px;
 }
 
-.page-title{
-  color: rgb(63,81,181);
+.page-title {
+  color: rgb(63, 81, 181);
   font-weight: 400;
   font-style: normal;
   font-family: "Roboto";
 }
 
-.gray-border{
+.gray-border {
   border: solid 1px rgb(185, 185, 185);
   border-radius: 5px;
 }
@@ -60,40 +59,40 @@ body{
   font-family: "Roboto";
 }
 
-.page-subtitle{
+.page-subtitle {
   font-weight: 500;
   font-style: normal;
   font-family: "Roboto";
 }
 
-.page-subtitle-h4{
+.page-subtitle-h4 {
   font-weight: 500;
   font-style: normal;
   font-family: "Roboto";
   color: #4e64d8;
 }
 
-.page-subtitle-grey{
+.page-subtitle-grey {
   font-weight: 500;
   font-style: normal;
   font-family: "Roboto";
   color: #9ca1bc;
 }
 
-.story-title{
+.story-title {
   font-weight: 500;
   font-style: normal;
   font-family: "Roboto";
   color: #2b387c;
 }
 
-.site-title{
+.site-title {
   padding-top: 3%;
   font-size: 50px;
   font-weight: lighter;
 }
 
-.content-area-compact{
+.content-area-compact {
   margin-left: 6%;
   margin-right: 6%;
   font-size: 20px;
@@ -101,7 +100,7 @@ body{
   min-height: 330px;
 }
 
-.content-area{
+.content-area {
   margin-left: 3%;
   margin-right: 3%;
   font-size: 20px;
@@ -113,27 +112,27 @@ md-nav-bar md-nav-ink-bar {
   background: white;
 }
 
-md-card:hover{
+md-card:hover {
   cursor: pointer;
 }
 
 footer {
   background-color: #ccc;
   bottom: 0;
-  width: 100% ;
+  width: 100%;
   height: 85px;
   clear: both;
 }
 
-footer div{
+footer div {
   padding-top: 40px;
 }
 
-.justified-content{
+.justified-content {
   text-align: justify;
 }
 
-.picture-credits{
+.picture-credits {
   font-size: 10px;
   position: relative;
   bottom: 25px;
@@ -147,7 +146,7 @@ footer div{
   color: gray;
 }
 
-.picture-credits-img{
+.picture-credits-img {
   font-size: 10px;
   position: relative;
   bottom: 25px;
@@ -157,7 +156,7 @@ footer div{
   width: 65%;
 }
 
-.picture-credits-dark{
+.picture-credits-dark {
   font-size: 10px;
   position: relative;
   bottom: 25px;
@@ -165,7 +164,7 @@ footer div{
   color: black;
 }
 
-.picture-credits-small{
+.picture-credits-small {
   font-size: 8px;
   position: relative;
   bottom: 25px;
@@ -173,21 +172,21 @@ footer div{
   color: black;
 }
 
-.text-enhancer{
+.text-enhancer {
   font-size: 150%;
 }
 
-.story-explaination{
+.story-explaination {
   font-size: 85%;
 }
 
-.story-explaination-title{
+.story-explaination-title {
   color: #2b387c;
   font-style: normal;
   font-family: "Roboto";
 }
 
-.story-explaination ol li{
+.story-explaination ol li {
   padding-bottom: 5%;
 }
 
@@ -196,23 +195,45 @@ ul.circle {
 }
 
 /* GRID LIST CONFIG */
+
 .gridListdemoBasicUsage md-grid-list {
-  margin: 8px; }
+  margin: 8px;
+}
 
 .gridListdemoBasicUsage .gray {
-  background: #999898; }
+  background: #999898;
+}
 
 .gridListdemoBasicUsage .green {
-  background: #b9f6ca; }
+  background: #b9f6ca;
+}
 
 .gridListdemoBasicUsage .yellow {
-  background: #ffff8d; }
+  background: #ffff8d;
+}
 
 .gridListdemoBasicUsage .blue {
-  background: #84ffff; }
+  background: #84ffff;
+}
 
 .gridListdemoBasicUsage .purple {
-  background: #b388ff; }
+  background: #b388ff;
+}
 
 .gridListdemoBasicUsage .red {
-  background: #ff8a80; }
+  background: #ff8a80;
+}
+
+.image-container {
+  border: solid 1px;
+  float: left;
+  width: 50%;
+}
+
+.orange-text {
+  color: #f96438;
+}
+
+.blue-text {
+  color: #228fa7;
+}

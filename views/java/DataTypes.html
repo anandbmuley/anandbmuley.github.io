@@ -1,0 +1,101 @@
+<div class="content-area">
+    <div align="center">
+        <h2 class="page-title">Data Types</h2>
+        <h4 class="sub-heading">Simple and Advanced</h4>
+        <img class="round-corner" src="images/java/BuildingMaterials.jpg" alt="">
+        <div class="picture-credits-dark">Created by bpch.vector - Freepik.com</div>
+    </div>
+    <div style="font-style: italic;width: 80%;text-justify: auto;margin-left: 10%;text-align: center;">
+        Disclaimer : The content of this blog are my views and understanding of the topic. I do not intend to demean
+        anything or anyone. I am only trying to share my views on the topic so that you will get a different thought
+        process and angle to look at this topic.
+    </div>
+    <h3 class="page-subtitle">Introduction</h3>
+    <p class="justified-content">
+        Any programming language has some <span style="color: #83a8b0;" class="text-enhancer">Basic Structural
+            Elements</span> for defining the
+        data which is stored. Java has similar provision. We know that <span class="text-enhancer">Basic
+            DataTypes</span> like <b>Integer, String, Double,
+            etc.</b> are to let the compiler know
+        <span style="color: #f96438;">what kind of data a particular reference can point to and also store in
+            memory</span>.
+        Most of the Software Developers
+        find these basic datatypes sufficient but we need to understand their significance and take our thought
+        process
+        to more abstract representations. Let us see how
+    </p>
+    <h3 class="page-subtitle">Details</h3>
+    <p class="justified-content">
+        Java POJO has <span class="text-enhancer">state</span> and <span class="text-enhancer">behaviour</span>. A state
+        is used to represent the data
+        about some <span class="orange-text">logical real life entity or
+            sometimes metadata about entities or program</span>. We have some state floating around the code too during
+        method invocation as an argument. For an
+        instance
+        you have a Customer class with below fields
+    </p>
+    <p style="text-align: center;" class="justified-content">
+        <img class="round-corner" width="25%" src="images/java/data-types/CustomerBasic.png" alt="Bike">
+        <br /><span style="font-size: 15px;font-weight: 400;">Basic Customer Entity</span>
+    </p>
+    <p class="justified-content">
+        Having <b>name, emailId</b> as <span class="text-enhancer">String</span> is sufficient for most of us. But if we
+        look back on what does a String datatype represents ? It is a <span class="orange-text">simple group of
+            characters</span>. Its too generic and basic representation. Name and EmailId although are captured as a
+        String but they have some meaning which distinguishes them. <span class="orange-text">A <span
+                class="text-enhancer">Name</span> of a person is a
+            noun and ideally it is containing only Alphabets.</span> Email on the other had has different parts
+        <span class="text-enhancer">username@domain</span> Ex. abc@example.com. When we model our POJOs with basic
+        datatype we end up losing this depiction
+        and restriction. We end up externalizing the validations for emailId which defies the
+        <span class="text-enhancer orange-text">encapsulation principle.</span> Some
+        may argue that validation is a cross cutting concern and should be separated out. I found that it does not
+        work out effectively that way. <b>If we make an object self-sufficient then we can localize the change and it
+            also easy to locate the change and build reasoning around it.</b> Take an example of <span
+            class="text-enhancer">Date Of Birth</span> field in
+        the Customer. It has <span class="text-enhancer">LocalDate</span> as the datatype which clearly mentions that it
+        a Date Information and we have to build it in certain format. <b>It does not capture time information for our
+            use
+            case.</b>
+    </p>
+    <p class="justified-content">
+        Creating such meaningful datatypes and localizing the attributes, validations and behaviour defines a new set of
+        datatypes which are not provided by Java inherently but we can build them using basic datatypes. We call them
+        <span class="text-enhancer blue-text">Advanced Datatypes.</span> <b>These are more abstract and closer to real
+            life mapping of the data.</b> Below is how the new Customer class will look like with Advanced Datatypes
+    </p>
+    <div style="text-align: center;display: inline;">
+        <table style="width: 100%;">
+            <tr>
+                <td>
+                    <img class="round-corner" src="images/java/data-types/CustomerAdvanced.png" alt="Bike">
+                    <br /><span style="font-size: 15px;font-weight: 400;">Customer Entity</span>
+                </td>
+                <td>
+                    <img class="round-corner" src="images/java/data-types/Email.png" alt="Bike">
+                    <br /><span style="font-size: 15px;font-weight: 400;">Email Datatype</span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <img class="round-corner" src="images/java/data-types/Name.png" alt="Bike">
+                    <br /><span style="font-size: 15px;font-weight: 400;">Name Datatype</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p class="justified-content">
+        Now the question would be <span class="text-enhancer blue-text">How do we differentiate between Entities and
+            Advanced Data
+            Types ? </span> We
+        have Customer
+        class which represents a real life entity because a<b> Customer is some physical entity which we can
+            correlate.</b>
+        Name and Email are abstract and they are used to define a Customer. A <span class="orange-text">Name and Email
+            has
+            no independent
+            existence unless they are associated to a Customer</span>. This logical reasoning could be used to define
+        advanced
+        datatypes.
+    </p>
+</div>
