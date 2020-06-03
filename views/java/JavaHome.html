@@ -10,16 +10,18 @@
     object oriented code using Java.
   </p>
 </div>
-<div layout="row" class="content-area">
-  <md-card ng-repeat="topic in topics" ng-click="loadPage(topic.route)" flex="20" md-theme="default" md-theme-watch>
+
+<div class="content-area">
+  <md-card class="topic-card" ng-repeat="topic in topics" ng-click="loadPage(topic.route)" md-theme="default"
+    md-theme-watch>
     <md-card-title layout="column">
-      <md-card-title-text>
+      <md-card-title-text class="topic-card-title">
         <span class="md-headline">{{topic.heading}}</span>
         <span class="md-subhead">{{topic.subHeading}}</span>
       </md-card-title-text>
       <md-card-title-media>
         <div class="md-media-lg card-media">
-          <img ng-src="images/{{topic.imageUrl}}" alt="">
+          <img ng-src="images/{{topic.imageUrl}}" alt="{{topic.imageUrl}}">
           <span class="picture-credits-small">{{topic.imageCredits}}</span>
         </div>
       </md-card-title-media>

@@ -1,0 +1,136 @@
+<div class="content-area">
+    <div align="center">
+        <h2 class="page-title">Final Class</h2>
+        <h4 class="sub-heading">Indicator of Class Design</h4>
+        <img class="round-corner" src="images/java/3d-check-box.jpg" alt="">
+        <div class="picture-credits-dark">Created by bpch.vector - Freepik.com</div>
+    </div>
+    <div style="font-style: italic;width: 80%;text-justify: auto;margin-left: 10%;text-align: center;">
+        Disclaimer : The content of this blog are my views and understanding of the topic. I do not intend to demean
+        anything or anyone. I am only trying to share my views on the topic so that you will get a different thought
+        process and angle to look at this topic.
+    </div>
+    <h3 class="page-subtitle">Introduction</h3>
+    <p class="justified-content">
+        A final class denotes that <span class="text-enhancer">Design is finalized and cannot be extended
+            further.</span> Having final classes for a
+        finalized design will benefit in clearly communicating other developers but will it impact the extensibility
+        principle ? What are the cases which makes a class a potential candidate for finalization ? Are we not adhering
+        to the
+        Design principles if we make the classes final ? What is need to clear communication among Developers ?
+    </p>
+
+    <p class="justified-content">
+        Language is a means of communication and <span class="final-class-green text-bold">Programming Languages</span>
+        help two
+        kinds of
+        communication :
+        <span class="text-enhancer final-class-blue">Communication between Humans & Machines</span> and
+        <span class="text-enhancer final-class-blue"> between Humans</span>.
+    </p>
+
+    <h3 class="page-subtitle">A program is a communication between humans and machines</h3>
+    <p class="justified-content">
+        We are trying to explain the machine what we intend it
+        to do. We are in the current age when we are at a higher level of abstraction. Now we don't do the assembly
+        language level of programming and we are trying to surpass this and make machines self learning and
+        understanding based on the Data. Still the kind of program may change and become more abstract but we have to
+        have <span class="text-enhancer">some way to communicate to machines.</span>
+    </p>
+
+    <h3 class="page-subtitle">A program is also a communication between humans (Software Developers)</h3>
+    <p class="justified-content">
+        A program written by one Software
+        Developer should be understood by another. Many argue over this statement saying that if both the Software
+        Developers understand the programming language then it should not be difficult for a Developer to understand
+        what a program does ? I don't agree to this point. Take an example below and let me know if you could read below
+        sentence.
+    </p>
+
+    <div class="code-snippet" style="width: 50%;">
+        Thissent enceisan exam pleofwh atabad pro graml ooksl ike
+    </div>
+
+    <p class="justified-content">
+        You might have found it difficult reading this sentence but later you were able to understand that it says :
+    </p>
+
+    <div class="code-snippet" style="width: 50%;">
+        This sentence is an example of what a bad program looks like
+    </div>
+
+    <p class="justified-content">
+        Whats wrong with the sentence. We all know English language. We all know it has letter and words. The sentence
+        above uses the same english alphabets. It has some words which are present in the sentence. Only thing is the
+        <span class="text-enhancer">spaces are not properly given between words</span>. <span
+            class="text-enhancer final-class-green">Its how a bad program looks like</span>
+        its difficult to read
+        quickly then
+        a Developer has to spend hours debugging when there is an issue or trying to understand what is being coded.
+    </p>
+
+    <p class="justified-content">
+        Now lets come back to the topic. A final class has a final keyword which can show that its not be extended or
+        moreover it cannot be extended. Its mostly used for the cases where <span class="final-class-blue text-bold">a
+            library owner does not want the
+            consumer
+            of the library to extend it an create
+            it extensions which may lead to un-predictable behaviour</span>. What are some of the examples of these kind
+        of classes
+        ? I will give a real life example for this then we will try to find such examples with some correlation.
+    </p>
+
+    <p class="justified-content">
+        The final keyword <span class="text-bold">restricts extension or inheritence</span>. In real life we know that
+        we cannot have any
+        child class
+        of <span class="text-enhancer final-class-green">Color class</span>. This is applicable if the inheritence
+        criteria is based on the wavelengths of
+        light. <span style="color: rgb(209, 63, 63);" class="text-enhancer">Red colored</span>
+        light has a wavelength of <span style="color: rgb(209, 63, 63);" class="text-enhancer">~ 700–635 nm</span> and
+        <span class="text-enhancer" style="color: rgb(255, 255, 75);">Yellow</span> has <span class="text-enhancer"
+            style="color: rgb(255, 255, 75);">~ 635–590 nm</span> (where nm - nanometers). In case of the
+        libraries lets say you have created <span class="text-enhancer">a parser</span> which can parse <span
+            class="text-enhancer">XML, JSON</span> and
+        <span class="text-enhancer">CSV</span> files. You have the library
+        designed for supporting these file formats and dedicated classes are there for them. You don't want the consumer
+        of the library to extend these classes as it may create some undesired results. Hence you will make them final.
+        Simply put, you will make all those classes final which you don't want the consumer of the library to extend.
+        You will let those classes non-final which support extension. In a way <span class="text-enhancer">you are in
+            control of the extensions
+            supported by your library.</span>
+    </p>
+
+    <p class="justified-content">
+        A final class <span class="text-bold">can also be created in the same project</span> when we realize the fact
+        that it should not be extended
+        further. Possible scenarios are :
+    </p>
+
+    <ul>
+        <li>
+            <b>Object Modelling for the Leaf Child in the Parent Child hierarchy - </b>It is the case of modelling
+            hierarchy of Domain Objects where in we know in the hierarchy for the Domain model it should not be extended
+            further
+        </li>
+        <li>
+            <b>Shallow hierarchy for Strategy Pattern - </b>A strategy pattern is behavioural design pattern used to
+            dynamically invoke a particular algorithm. Lets not get confused with algorithm here. <span
+                class="text-bold">Its a behavioural
+                design pattern which has the highest level of abstraction of that of the common behaviour.</span> Hence
+            it can be
+            used for selecting which mapper to be invoked based on the need. But in these cases when we increase the
+            depth of specialization then things are unmanageable. Hence when we want the depth of hierarchy to be
+            controlled then we should go for a final class
+        </li>
+    </ul>
+
+    <h3 class="page-subtitle">Summary</h3>
+
+    <p class="justified-content">
+        A final class is an indication that its the least child in the hierarchy and its design is final and could not
+        be extended. Hence we have to be cautious while creating final classes but we should not be hesitant to make a
+        class final.
+    </p>
+
+</div>

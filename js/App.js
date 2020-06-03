@@ -18,7 +18,11 @@ app.config(['$routeProvider', function ($routeProvider) {
     templateUrl: 'views/research/ResearchHome.html',
     controller: 'ResearchHomeController'
   }).when('/java/data-types', {
-    templateUrl: 'views/java/DataTypes.html'
+    templateUrl: 'views/java/DataTypes.html',
+    controller: 'ScrollToTopController'
+  }).when('/java/final-class', {
+    templateUrl: 'views/java/FinalClass.html',
+    controller: 'ScrollToTopController'
   }).when('/java/object-oriented-design', {
     templateUrl: 'views/java/ObjectOrientedProgramming.html',
     controller: 'ScrollToTopController'

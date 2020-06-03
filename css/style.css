@@ -237,3 +237,45 @@ ul.circle {
 .blue-text {
   color: #228fa7;
 }
+
+.topic-card {
+  width: 22%;
+  float: left;
+  margin-bottom: 5%;
+  height: 300px;
+  text-align: center;
+}
+
+.topic-card:hover {
+  border: solid 2px #0185e3;
+}
+
+.topic-card-title {
+  margin-bottom: 5%;
+}
+
+.card-media {
+  margin-left: 17%;
+}
+
+.final-class-green {
+  color: #54b937;
+}
+
+.text-bold {
+  font-weight: 400;
+}
+
+.final-class-blue {
+  color: #289bbb;
+}
+
+.code-snippet {
+  border: solid 1px #959899;
+  border-radius: 5px;
+  background-color: #cacaca;
+  padding: 1%;
+  width: fit-content;
+  margin-left: 5%;
+  color: #5d5d5e;
+}

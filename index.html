@@ -57,7 +57,8 @@
         </div>
       </md-toolbar>
       <md-nav-bar class="md-primary" md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-        <md-nav-item ng-repeat="navlink in navigations" md-nav-click="goto(navlink.navUrl)" name="{{navlink.displayName}}">
+        <md-nav-item ng-repeat="navlink in navigations" md-nav-click="goto(navlink.navUrl)"
+          name="{{navlink.displayName}}">
           {{navlink.displayName}}
         </md-nav-item>
       </md-nav-bar>

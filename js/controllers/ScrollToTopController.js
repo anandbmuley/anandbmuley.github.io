@@ -1,6 +1,6 @@
-app.controller('ScrollToTopController',['$scope','$location','$rootScope',
-          function($scope,$location,$rootScope){
+app.controller('ScrollToTopController', ['$scope', '$location', '$rootScope', '$window',
+    function ($scope, $location, $rootScope, $window) {
 
-    window.scrollTo(0,0);
-  
-}]);
+        $window.scrollTo(0, 0);
+
+    }]);

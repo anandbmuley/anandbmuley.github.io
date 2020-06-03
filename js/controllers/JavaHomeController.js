@@ -36,6 +36,13 @@ app.controller('JavaHomeController', ['$scope', '$location',
         'imageUrl': 'java/BuildingMaterials.jpg',
         'route': '/java/data-types',
         'imageCredits': 'Created by bpch.vector - www.freepik.com'
+      },
+      {
+        'heading': 'Final Class',
+        'subHeading': 'Class Design Indicator',
+        'imageUrl': 'java/3d-check-box.jpg',
+        'route': '/java/final-class',
+        'imageCredits': 'Created by bpch.vector - www.freepik.com'
       }
     ];
 
