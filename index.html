@@ -50,13 +50,15 @@
 
 <body ng-class="{ 'landing-page-body' : isLandingPage }">
   <div ng-if="!isLandingPage" ng-controller="NavigationController" ng-cloak>
-    <md-content class="md-padding">
+    <md-content class="md-padding header-container">
       <md-toolbar class="md-medium-tall md-primary">
         <div class="md-toolbar-tools">
-          <div md-truncate flex class="site-title">Applied Technology</div>
+          <h2 class="site-title">Applied Technology</h2>
         </div>
       </md-toolbar>
-      <md-nav-bar class="md-primary" md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+
+      <md-nav-bar class="md-primary header-nav-bar" md-selected-nav-item="currentNavItem"
+        nav-bar-aria-label="navigation links">
         <md-nav-item ng-repeat="navlink in navigations" md-nav-click="goto(navlink.navUrl)"
           name="{{navlink.displayName}}">
           {{navlink.displayName}}
@@ -68,7 +70,7 @@
   <div class="md-padding" ng-view class="site-content">
 
   </div>
-  <footer ng-if="!isLandingPage" ng-controller="NavigationController">
+  <footer class="site-footer" ng-if="!isLandingPage" ng-controller="NavigationController">
     <div layout="row" layout-align="center">
       &copy;Anand Muley
     </div>

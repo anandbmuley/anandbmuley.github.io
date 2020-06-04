@@ -21,7 +21,7 @@ body {
 }
 
 .landing-page-container .site-title {
-  font-size: 80px;
+  font-size: 10vw;
   font-weight: bold;
   margin-bottom: 3%;
   color: black;
@@ -88,8 +88,9 @@ body {
 
 .site-title {
   padding-top: 3%;
-  font-size: 50px;
   font-weight: lighter;
+  font-size: inherit;
+  padding-left: 1.8%;
 }
 
 .content-area-compact {
@@ -278,4 +279,71 @@ ul.circle {
   width: fit-content;
   margin-left: 5%;
   color: #5d5d5e;
+}
+
+.blog-image {
+  max-width: 100%;
+}
+
+.blog-image-single>img {
+  width: 50%;
+}
+
+nav>ul {
+  flex-wrap: wrap;
+  background-color: rgb(63, 81, 181);
+}
+
+.blog-images-list {
+  float: left;
+  text-align: center;
+  width: 100%;
+}
+
+.blog-images-list>div {
+  float: left;
+  width: 50%;
+}
+
+@media only screen and (max-width: 500px) {
+  .landing-page-container .site-title {
+    font-size: 200%;
+    margin-bottom: 30%;
+  }
+  .header-container {
+    overflow: visible;
+    margin-bottom: 5%;
+  }
+  .site-author {
+    margin-bottom: 50%;
+  }
+  .home-page-main-content {
+    max-width: 95% !important;
+  }
+  .ninja-image-container {
+    width: 80%;
+  }
+  .ninja-image {
+    width: 100%;
+  }
+  .topic-card {
+    width: 90%;
+    max-width: 90% !important;
+  }
+  .site-footer {
+    bottom: 10px;
+  }
+  .blog-image {
+    width: 100%;
+  }
+  .blog-images-list>div {
+    float: left;
+    width: 100%;
+  }
+  .blog-images-list .blog-image {
+    width: 100%;
+  }
+  .blog-image-single>img {
+    width: 100%;
+  }
 }

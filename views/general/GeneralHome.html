@@ -1,26 +1,26 @@
 <div style="margin-left: 4%">
-    <h2>General</h2>
-    <p>
-        My thought process is not limited to technology, architecture and design. I also think
-        about the other aspects of Software Development. Aspects such as Ethical Software Development, 
-        How things evolved in Software Development and so on. In this section you will get to know about
-        such aspects which are a topping to the cake of Software Development.
-    </p>
+  <h2>General</h2>
+  <p>
+    My thought process is not limited to technology, architecture and design. I also think
+    about the other aspects of Software Development. Aspects such as Ethical Software Development,
+    How things evolved in Software Development and so on. In this section you will get to know about
+    such aspects which are a topping to the cake of Software Development.
+  </p>
 </div>
-<div layout="row" class="content-area">
-    <md-card ng-repeat="topic in topics" ng-click="loadPage(topic.route)" flex="20" md-theme="default" md-theme-watch>
-      <md-card-title layout="column">
-        <md-card-title-text>
-          <span class="md-headline">{{topic.heading}}</span>
-          <span class="md-subhead">{{topic.subHeading}}</span>
-        </md-card-title-text>
-        <md-card-title-media>
-          <div class="md-media-lg card-media">
-            <img ng-src="images/general/{{topic.imageUrl}}" alt="">
-            <span class="picture-credits-small">{{topic.imageCredits}}</span>
-          </div>
-        </md-card-title-media>
-      </md-card-title>
-    </md-card>
-  </div>
-  
+<div class="content-area">
+  <md-card class="topic-card" ng-repeat="topic in topics" ng-click="loadPage(topic.route)" flex="20" md-theme="default"
+    md-theme-watch>
+    <md-card-title layout="column">
+      <md-card-title-text>
+        <span class="md-headline">{{topic.heading}}</span>
+        <span class="md-subhead">{{topic.subHeading}}</span>
+      </md-card-title-text>
+      <md-card-title-media>
+        <div class="md-media-lg card-media">
+          <img ng-src="images/general/{{topic.imageUrl}}" alt="">
+          <span class="picture-credits-small">{{topic.imageCredits}}</span>
+        </div>
+      </md-card-title-media>
+    </md-card-title>
+  </md-card>
+</div>

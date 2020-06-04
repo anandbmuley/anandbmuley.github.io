@@ -1,95 +1,126 @@
 <div class="content-area">
-    <div align="center">
-        <h2 class="page-title">Let Code Do The Talking - Domain Modelling</h2>
-        <img width="600px" class="round-corner" src="images/virtual-reality.jpg" alt="">
-        <div class="picture-credits-dark">Created by katemangostar - www.freepik.com</div>
-    </div>
+  <div align="center">
+    <h2 class="page-title">Let Code Do The Talking - Domain Modelling</h2>
+    <img class="round-corner blog-image" src="images/virtual-reality.jpg" alt="">
+    <div class="picture-credits-dark">Created by katemangostar - www.freepik.com</div>
+  </div>
 
-    <h3 class="page-subtitle">Introduction</h3>
-    <p class="justified-content">
-      Consider that you have to model a <span class="text-enhancer">parking lot</span>.
-      A multi-level parking lot has parkings for <span class="text-enhancer">Bikes</span> and <span class="text-enhancer">Car</span>.
-      There are four levels to park the vehicles. On <span class="text-enhancer">first, second and third floor</span> you can
-      park <span class="text-enhancer">Cars</span> and <span class="text-enhancer">fourth floor</span> you can park
-      <span class="text-enhancer">Bikes</span>.
-    </p>
+  <h3 class="page-subtitle">Introduction</h3>
+  <p class="justified-content">
+    Consider that you have to model a <span class="text-enhancer">parking lot</span>.
+    A multi-level parking lot has parkings for <span class="text-enhancer">Bikes</span> and <span
+      class="text-enhancer">Car</span>.
+    There are four levels to park the vehicles. On <span class="text-enhancer">first, second and third floor</span> you
+    can
+    park <span class="text-enhancer">Cars</span> and <span class="text-enhancer">fourth floor</span> you can park
+    <span class="text-enhancer">Bikes</span>.
+  </p>
 
-    <div layout="row">
-      <div class="story-container" md-whiteframe="10" flex="60">
-        <h3 class="story-title">Modelling</h3>
-        <p class="justified-text">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We have to understand the existence of a Parking Lot with given requirement in real life
-          to model it correctly. A Parking Lot has multiple levels. Once the parking lot is built
-          its levels will be constant unless it is enhanced. But in general case we
-          have the number of levels fixed. Hence you can have a parking lot class with multiple
-          <span class="text-enhancer">parking levels as composition</span>.
-        </p>
-        <p class="justified-text">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A Parking Level will have parkings. A parking has an area or size. To model it simply
-          we can denote size as BIKE and CAR. Hence a parking can either have a size of BIKE or
-          CAR. We can ideally have a single class called Parking with size as a composition
-          having <span class="text-enhancer">enum</span> values as : <span class="text-enhancer">BIKE</span> or
-          <span class="text-enhancer">CAR</span>. But when we think
-          that three floors are reserved for CAR parking and fourth floor for BIKE parking.
-          Hence we will have to represent that as <span class="text-enhancer">separate Parking class</span> for BIKE and CAR which inherit
-          the protected field size from the <span class="text-enhancer">Parking abstract class</span>.
-        </p>
-        <p class="justified-text">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An additional property called
-          occupied denoted by a boolean flag is also required for the parking class to represent
-          whether a parking is occupied or not. We could have used the same class to model the
-          Parking Level as well but we should represent the constraints using the model classes.
-          When we design the classes to represent the design constraints then the code becomes
-          more realistic. Hence we will have a <span class="text-enhancer">abstract class</span> as
-          <span class="text-enhancer">Parking Level</span> with child classes
-          <span class="text-enhancer">Bike Parking Level</span> and <span class="text-enhancer">Car Parking Level</span>.
-        </p>
-      </div>
-      <div flex-offset="5" flex>
-          <img md-whiteframe="20" style="border-radius:5px" src="images/let-code-do-the-talking/object-modelling/Parking Level.png" alt="Parking Level">
-          <img md-whiteframe="20" style="border-radius:5px" src="images/let-code-do-the-talking/object-modelling/Car Parking Level.png" alt="Car Parking Level">
-          <img md-whiteframe="20" style="border-radius:5px" src="images/let-code-do-the-talking/object-modelling/Bike Parking Level.png" alt="Bike Parking Level">
-      </div>
+  <h3 class="story-title">Modelling</h3>
+  <p class="justified-text">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We have to understand the existence of a Parking Lot with given requirement in
+    real life
+    to model it correctly. A Parking Lot has multiple levels. Once the parking lot is built
+    its levels will be constant unless it is enhanced. But in general case we
+    have the number of levels fixed. Hence you can have a parking lot class with multiple
+    <span class="text-enhancer">parking levels as composition</span>.
+  </p>
+  <p class="justified-text">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A Parking Level will have parkings. A parking has an area or size. To model it
+    simply
+    we can denote size as BIKE and CAR. Hence a parking can either have a size of BIKE or
+    CAR. We can ideally have a single class called Parking with size as a composition
+    having <span class="text-enhancer">enum</span> values as : <span class="text-enhancer">BIKE</span> or
+    <span class="text-enhancer">CAR</span>. But when we think
+    that three floors are reserved for CAR parking and fourth floor for BIKE parking.
+    Hence we will have to represent that as <span class="text-enhancer">separate Parking class</span> for BIKE and
+    CAR which inherit
+    the protected field size from the <span class="text-enhancer">Parking abstract class</span>.
+  </p>
+  <div class="blog-images-list">
+    <div>
+      <img class="round-corner blog-image" src="images/let-code-do-the-talking/object-modelling/Parking Level.png"
+        alt="Parking Level">
+      <br /><span style="font-size: 15px;font-weight: 400;">Parking Level</span>
     </div>
-    <br clear="both"/>
-    <div layout="row">
-      <div class="story-container" md-whiteframe="10" flex="40">
-        <h3 class="story-title">Instantiating Objects</h3>
-        <p class="justified-text">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now lets create objects for our Parking Lot application.
-          We will need a <span class="text-enhancer">Parking Lot object</span> which has four
-          Parking Levels out of which three are Car Parking Levels and one is Bike Parking Level.
-          Hence we will have <span class="text-enhancer">three</span> Car Parking Level Objects
-          and <span class="text-enhancer">one</span> Bike Parking Level object.
-          A Car Parking Level will have <span class="text-enhancer">30 Car Parkings</span>.
-          Hence we will have total <span class="text-enhancer">30 X 3 = 90 objects</span> to
-          represent Car Parkings. A Bike parking level has 150 parkings. Hence we will create
-          <span class="text-enhancer">150 objects</span> to represent Bike Parkings.
-          To ensure that the number of parkings and parking levels are fixed, we are going to
-          model them as <span class="text-enhancer">arrays</span> instead of lists since arrays
-          have fixed length. To ensure that number of Car parkings is fixed on each car parking
-          level we are going to provide only name as the constructor argument and in the
-          constructor of the Car Parking Level we will use the fixed value of number of Parkings.
-          Similarly for the Bike Parking Level.
-        </p>
-      </div>
-      <div flex-offset="5" flex>
-          <img md-whiteframe="20" style="border-radius:5px" src="images/let-code-do-the-talking/object-modelling/Parking.png" alt="Parking">
-          <img md-whiteframe="20" style="border-radius:5px" src="images/let-code-do-the-talking/object-modelling/Car Parking.png" alt="Car Parking">
-          <img md-whiteframe="20" style="border-radius:5px" src="images/let-code-do-the-talking/object-modelling/Bike Parking.png" alt="Bike Parking">
-          <img md-whiteframe="20" style="border-radius:5px" src="images/let-code-do-the-talking/object-modelling/Parking Lot.png" alt="Parking Lot">
-      </div>
+    <div>
+      <img class="round-corner blog-image" src="images/let-code-do-the-talking/object-modelling/Car Parking Level.png"
+        alt="Car Parking Level">
+      <br /><span style="font-size: 15px;font-weight: 400;">Car Parking Level</span>
     </div>
-    <h3 class="page-subtitle">Summary</h3>
-    <p class="justified-content">
-      Object modelling requires <b>clear understanding of requirements</b> and <b>constraints</b>.
-      Once you are clear with this, then using a programming language efficiently to model
-      them and creating a good design is all thats needed. Classes are known as the templates
-      to create multiple objects but also bear in mind that <b>classes should depict the business
-      requirement and constraints effectively</b>. We all know that <span class="text-enhancer">20 %</span> of the time of the
-      Software Life goes into <span class="text-enhancer">Development</span>
-      but <span class="text-enhancer">80 %</span> into <b>Enhancing</b> and <b>Maintaining</b> it. Hence ensure that a design is <span class="text-enhancer">Scalable</span>,
-      <span class="text-enhancer">Readable</span> and <span class="text-enhancer">Maintainable</span>.
-    </p>
+    <div>
+      <img class="round-corner blog-image" src="images/let-code-do-the-talking/object-modelling/Bike Parking Level.png"
+        alt="Bike Parking Level">
+      <br /><span style="font-size: 15px;font-weight: 400;">Bike Parking Level</span>
+    </div>
+  </div>
+  <p class="justified-text">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An additional property called
+    occupied denoted by a boolean flag is also required for the parking class to represent
+    whether a parking is occupied or not. We could have used the same class to model the
+    Parking Level as well but we should represent the constraints using the model classes.
+    When we design the classes to represent the design constraints then the code becomes
+    more realistic. Hence we will have a <span class="text-enhancer">abstract class</span> as
+    <span class="text-enhancer">Parking Level</span> with child classes
+    <span class="text-enhancer">Bike Parking Level</span> and <span class="text-enhancer">Car Parking Level</span>.
+  </p>
+
+  <br clear="both" />
+
+  <h3 class="story-title">Instantiating Objects</h3>
+  <p class="justified-text">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now lets create objects for our Parking Lot application.
+    We will need a <span class="text-enhancer">Parking Lot object</span> which has four
+    Parking Levels out of which three are Car Parking Levels and one is Bike Parking Level.
+    Hence we will have <span class="text-enhancer">three</span> Car Parking Level Objects
+    and <span class="text-enhancer">one</span> Bike Parking Level object.
+    A Car Parking Level will have <span class="text-enhancer">30 Car Parkings</span>.
+    Hence we will have total <span class="text-enhancer">30 X 3 = 90 objects</span> to
+    represent Car Parkings. A Bike parking level has 150 parkings. Hence we will create
+    <span class="text-enhancer">150 objects</span> to represent Bike Parkings.
+    To ensure that the number of parkings and parking levels are fixed, we are going to
+    model them as <span class="text-enhancer">arrays</span> instead of lists since arrays
+    have fixed length. To ensure that number of Car parkings is fixed on each car parking
+    level we are going to provide only name as the constructor argument and in the
+    constructor of the Car Parking Level we will use the fixed value of number of Parkings.
+    Similarly for the Bike Parking Level.
+  </p>
+
+  <div class="blog-images-list">
+    <div>
+      <img class="round-corner blog-image" src="images/let-code-do-the-talking/object-modelling/Parking.png"
+        alt="Parking">
+      <br /><span style="font-size: 15px;font-weight: 400;">Parking</span>
+    </div>
+    <div>
+      <img class="round-corner blog-image" src="images/let-code-do-the-talking/object-modelling/Car Parking.png"
+        alt="Car Parking">
+      <br /><span style="font-size: 15px;font-weight: 400;">Car Parking</span>
+    </div>
+    <div>
+      <img class="round-corner blog-image" src="images/let-code-do-the-talking/object-modelling/Bike Parking.png"
+        alt="Bike Parking">
+      <br /><span style="font-size: 15px;font-weight: 400;">Bike Parking</span>
+    </div>
+    <div>
+      <img class="round-corner blog-image" src="images/let-code-do-the-talking/object-modelling/Parking Lot.png"
+        alt="Parking Lot">
+      <br /><span style="font-size: 15px;font-weight: 400;">Parking Lot</span>
+    </div>
+  </div>
+
+  <h3 class="page-subtitle">Summary</h3>
+  <p class="justified-content">
+    Object modelling requires <b>clear understanding of requirements</b> and <b>constraints</b>.
+    Once you are clear with this, then using a programming language efficiently to model
+    them and creating a good design is all thats needed. Classes are known as the templates
+    to create multiple objects but also bear in mind that <b>classes should depict the business
+      requirement and constraints effectively</b>. We all know that <span class="text-enhancer">20 %</span> of the time
+    of the
+    Software Life goes into <span class="text-enhancer">Development</span>
+    but <span class="text-enhancer">80 %</span> into <b>Enhancing</b> and <b>Maintaining</b> it. Hence ensure that a
+    design is <span class="text-enhancer">Scalable</span>,
+    <span class="text-enhancer">Readable</span> and <span class="text-enhancer">Maintainable</span>.
+  </p>
 
 </div>

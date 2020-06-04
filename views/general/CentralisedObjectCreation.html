@@ -1,63 +1,81 @@
 <div class="content-area-compact">
-        <div align="center">
-            <h2 class="page-title">Centralised Object Creation</h2>
-            <h4 class="sub-heading">True Factory Pattern</h4>
-            <img class="round-corner" src="images/general/Factory.jpeg" alt="">
-            <div class="picture-credits-dark">Created by Freepik - www.freepik.com</div>
-        </div>
-        <p class="justified-content">
-            <i style="font-size: medium;">
-                <b>Disclaimer :</b> The content of this blog are my views, observations and understanding about the topic. I do not intend to undermine anything. I am simply giving my perspective about it. This will help you to look at the topic from a different angle.
-            </i>
-        </p>
-        
-        <p class="justified-content">
-            The design patterns help solving common issues. Factory pattern helps in resolving the issues relating to object creation in an application. Hence it is grouped under Creational Design Pattern.
-        </p>
-
-        <p class="justified-content">
-            In normal enterprise java application there are many different factories we can think. A CRUD application would essentially have set of DTOs (Data Transfer Objects) and Entities, few service classes, DAO (Data Access Objects) classes. I have worked on spring framework based applications. Hence creating and managing objects is done by spring. I think its a global factory with different options. I will touch upon a simple centralised factory which handles the responsibility of creating objects. This means within my application nowhere else should I be able to create an instance of the classes which I am managing via the factory.
-        </p>
-
-        <p class="justified-content">
-            Take an example of Car factory. I setup a factory for managing instances of 2 types of cars : AUDI and BMW. I want that creation of the objects should be managed by a factory so that this is encapsulated from the rest of the application. I will illustrate this with an example.
-        </p>
-
-        <p class="justified-content">
-            I have a package called com.factorypattern. It contains the classes : Car, Audi and BMW
-        </p>
-
-        <div align="center">
-            <img class="round-corner gray-border" src="images/general/centralized-object-creation/CarClass.png" alt="">
-        </div>
-        
-        <p class="justified-content">
-            Access specifiers for Audi and BMW class declaration are default which means they are package private. Moreover the constructors of these classes are also having same access specifiers. I introduce a factory class in the same package which will expose the required apis for creating instances of Audi and BMW classes.
-        </p>
-        
-        <div align="center">
-            <img class="round-corner gray-border" src="images/general/centralized-object-creation/CarFactory.png" alt="">
-        </div>
-
-        <p class="justified-content">
-            This way I can now create instance of the Audi and BMW via CarFactory only. I would get and error if I try to instantiate the classes directly since they are package private.
-        </p>
-
-        <h3>Pros</h3>
-
-        <p class="justified-content">
-            Centralisation of object creation which helps in controlling the number of objects created of specific type or the types managed via that factory
-        </p>
-
-        <h3>Cons</h3>
-
-        <p class="justified-content">
-            It works only for homogeneous objects which we can package together. If the objects are separated in different package then it won't serve the purpose
-        </p>
-
-        <div align="center">
-            <h3>KEEP THINKING !</h3>
-        </div>
-    
+    <div align="center">
+        <h2 class="page-title">Centralised Object Creation</h2>
+        <h4 class="sub-heading">True Factory Pattern</h4>
+        <img class="round-corner blog-image" src="images/general/Factory.jpeg" alt="">
+        <div class="picture-credits-dark">Created by Freepik - www.freepik.com</div>
     </div>
-    
+    <p class="justified-content">
+        <i style="font-size: medium;">
+            <b>Disclaimer :</b> The content of this blog are my views, observations and understanding about the topic. I
+            do not intend to undermine anything. I am simply giving my perspective about it. This will help you to look
+            at the topic from a different angle.
+        </i>
+    </p>
+
+    <p class="justified-content">
+        The design patterns help solving common issues. Factory pattern helps in resolving the issues relating to object
+        creation in an application. Hence it is grouped under Creational Design Pattern.
+    </p>
+
+    <p class="justified-content">
+        In normal enterprise java application there are many different factories we can think. A CRUD application would
+        essentially have set of DTOs (Data Transfer Objects) and Entities, few service classes, DAO (Data Access
+        Objects) classes. I have worked on spring framework based applications. Hence creating and managing objects is
+        done by spring. I think its a global factory with different options. I will touch upon a simple centralised
+        factory which handles the responsibility of creating objects. This means within my application nowhere else
+        should I be able to create an instance of the classes which I am managing via the factory.
+    </p>
+
+    <p class="justified-content">
+        Take an example of Car factory. I setup a factory for managing instances of 2 types of cars : AUDI and BMW. I
+        want that creation of the objects should be managed by a factory so that this is encapsulated from the rest of
+        the application. I will illustrate this with an example.
+    </p>
+
+    <p class="justified-content">
+        I have a package called com.factorypattern. It contains the classes : Car, Audi and BMW
+    </p>
+
+    <div style="text-align: center;" class="justified-content blog-image-single">
+        <img class="round-corner" width="25%" src="images/general/centralized-object-creation/CarClass.png"
+            alt="Car Class">
+        <br /><span style="font-size: 15px;font-weight: 400;">Car Class</span>
+    </div>
+
+    <p class="justified-content">
+        Access specifiers for Audi and BMW class declaration are default which means they are package private. Moreover
+        the constructors of these classes are also having same access specifiers. I introduce a factory class in the
+        same package which will expose the required apis for creating instances of Audi and BMW classes.
+    </p>
+
+    <div style="text-align: center;" class="justified-content blog-image-single">
+        <img class="round-corner" width="25%" src="images/general/centralized-object-creation/CarFactory.png"
+            alt="Car Factory">
+        <br /><span style="font-size: 15px;font-weight: 400;">Car Factory</span>
+    </div>
+
+    <p class="justified-content">
+        This way I can now create instance of the Audi and BMW via CarFactory only. I would get and error if I try to
+        instantiate the classes directly since they are package private.
+    </p>
+
+    <h3>Pros</h3>
+
+    <p class="justified-content">
+        Centralisation of object creation which helps in controlling the number of objects created of specific type or
+        the types managed via that factory
+    </p>
+
+    <h3>Cons</h3>
+
+    <p class="justified-content">
+        It works only for homogeneous objects which we can package together. If the objects are separated in different
+        package then it won't serve the purpose
+    </p>
+
+    <div align="center">
+        <h3>KEEP THINKING !</h3>
+    </div>
+
+</div>

@@ -1,27 +1,31 @@
 <div style="margin-left: 4%">
     <h2>Research</h2>
     <p>
-        I am a thinker. Hence most of the time I spend thinking about various topics. Now-a-days with Google when you start
-        reading about a topic you can travel the ocean of web hyperlinks and gain knowledge of various topics in depth. Once
-        I read a topic I try to understand it. Reading data on the internet is at times factual. Hence understanding it is needed.
-        In this section you will find my understanding of various topics based on factual data analysis and grasping the intricacies
+        I am a thinker. Hence most of the time I spend thinking about various topics. Now-a-days with Google when you
+        start
+        reading about a topic you can travel the ocean of web hyperlinks and gain knowledge of various topics in depth.
+        Once
+        I read a topic I try to understand it. Reading data on the internet is at times factual. Hence understanding it
+        is needed.
+        In this section you will find my understanding of various topics based on factual data analysis and grasping the
+        intricacies
         of it.
     </p>
 </div>
-<div layout="row" class="content-area">
-    <md-card ng-repeat="topic in topics" ng-click="loadPage(topic.route)" flex="20" md-theme="default" md-theme-watch>
+<div class="content-area">
+    <md-card class="topic-card" ng-repeat="topic in topics" ng-click="loadPage(topic.route)" flex="20"
+        md-theme="default" md-theme-watch>
         <md-card-title layout="column">
-        <md-card-title-text>
-            <span class="md-headline">{{topic.heading}}</span>
-            <span class="md-subhead">{{topic.subHeading}}</span>
-        </md-card-title-text>
-        <md-card-title-media>
-            <div class="md-media-lg card-media">
-            <img ng-src="images/research/{{topic.imageUrl}}" alt="">
-            <span class="picture-credits-small">{{topic.imageCredits}}</span>
-            </div>
-        </md-card-title-media>
+            <md-card-title-text>
+                <span class="md-headline">{{topic.heading}}</span>
+                <span class="md-subhead">{{topic.subHeading}}</span>
+            </md-card-title-text>
+            <md-card-title-media>
+                <div class="md-media-lg card-media">
+                    <img ng-src="images/research/{{topic.imageUrl}}" alt="">
+                    <span class="picture-credits-small">{{topic.imageCredits}}</span>
+                </div>
+            </md-card-title-media>
         </md-card-title>
     </md-card>
 </div>
-      

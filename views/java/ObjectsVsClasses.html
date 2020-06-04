@@ -1,132 +1,153 @@
 <div class="content-area">
-    <div align="center">
-        <h2 class="page-title">Objects vs Classes</h2>  
-        <h4 class="sub-heading">Which one to use when</h4>
-        <img class="round-corner" src="images/ObjectsVsClasses.jpg" alt="">
-        <div class="picture-credits-dark">Created by alekksall - www.freepik.com</div>
+  <div align="center">
+    <h2 class="page-title">Objects vs Classes</h2>
+    <h4 class="sub-heading">Which one to use when</h4>
+    <img class="round-corner blog-image" src="images/ObjectsVsClasses.jpg" alt="">
+    <div class="picture-credits-dark">Created by alekksall - www.freepik.com</div>
+  </div>
+  <h3 class="page-subtitle">Introduction</h3>
+  <p class="justified-content">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I always wondered, “Although definition of a <span class="text-enhancer">Class</span>
+    states that
+    its a <span class="text-enhancer">Blueprint</span> to create different
+    <span class="text-enhancer">Objects</span>. In reality how to decide that something should be
+    represented as a class or an object”. Object has <span class="text-enhancer">State</span> and
+    <span class="text-enhancer">Behaviour</span>. Class defines what kind of states can be stored
+    in the object but the <span class="text-enhancer">behaviour definition is same</span>.
+  </p>
+  <h3 class="page-subtitle">Use Case - Modelling Vehicles</h3>
+
+  <p class="justified-content">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lets take an example of three types of <span class="text-enhancer">Vehicles</span>
+    :
+    <span class="text-enhancer">Bike</span>,
+    <span class="text-enhancer">Car</span> and
+    <span class="text-enhancer">Auto-Rickshaw</span>. All three are specialized kinds of Vehicle.
+    Based on the abstraction we can say that for all these vehicles to <b>move</b> they
+    <span class="text-enhancer">need wheels</span>. Although the <b>number of wheels differ</b> based
+    on the kind of vehicle. There are two different ways of modelling it :
+  </p>
+
+  <div class="blog-images-list">
+    <div>
+      <img class="round-corner blog-image" src="images/objects-vs-classes/bike.jpg" alt="Bike">
+      <br /><span style="font-size: 15px;font-weight: 400;">Bike</span>
     </div>
-    <h3 class="page-subtitle">Introduction</h3>
-    <p class="justified-content">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I always wondered, “Although definition of a <span class="text-enhancer">Class</span> states that
-      its a <span class="text-enhancer">Blueprint</span> to create different
-      <span class="text-enhancer">Objects</span>. In reality how to decide that something should be
-      represented as a class or an object”. Object has <span class="text-enhancer">State</span> and
-      <span class="text-enhancer">Behaviour</span>. Class defines what kind of states can be stored
-      in the object but the <span class="text-enhancer">behaviour definition is same</span>.
-    </p>
-    <div class="justified-content">
-      <h3 class="page-subtitle">Use Case - Modelling Vehicles</h3>
-      <div layout="row">
-        <div flex="40">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lets take an example of three types of <span class="text-enhancer">Vehicles</span> :
-          <span class="text-enhancer">Bike</span>,
-          <span class="text-enhancer">Car</span> and
-          <span class="text-enhancer">Auto-Rickshaw</span>. All three are specialized kinds of Vehicle.
-          Based on the abstraction we can say that for all these vehicles to <b>move</b> they
-          <span class="text-enhancer">need wheels</span>. Although the <b>number of wheels differ</b> based
-          on the kind of vehicle. There are two different ways of modelling it :
-        </div>
-        <div flex-offset="5" flex>
-          <img class="round-corner" width="60%" src="images/objects-vs-classes/bike.jpg" alt="Bike">
-          <img class="round-corner" width="40%" src="images/objects-vs-classes/auto-rickshaw.jpg" alt="Auto Rickshaw">
-          <img class="round-corner" width="50%" src="images/objects-vs-classes/car.jpg" alt="Car">
-        </div>
-      </div>
-
-      <h4 class="page-subtitle-h4">Single Class Multiple Instances</h4>
-      <div class="justified-content">
-        Model all three using a <span class="text-enhancer">non-abstract Vehicle</span> class and
-        have <b>noOfWheels value as a state</b> which will enable us to create three different
-        instances which are identified based on the number of wheels
-      </div>
-
-      <h4 class="page-subtitle-h4">Separate Classes</h4>
-      Separate classes for all three types with a single <span class="text-enhancer">abstract parent class Vehicle</span> having noOfWheels
-      as a <span class="text-enhancer">Protected field</span> which will be inherited by the child Classes.
-      <br clear="both"/><br clear="both"/>
-      <div class="justified-content">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Let's go with <b>Single Class Multiple Instances Approach</b>. Suppose we create on instance of
-        Vehicle class with noOfWheels as <span class="text-enhancer">two</span>, then its an instance of
-        <span class="text-enhancer">Bike</span>. Similarly for <span class="text-enhancer">Auto-Rickshaw</span>
-        and <span class="text-enhancer">Car</span> we can have value of
-        noOfWheels instance variable as <span class="text-enhancer">three</span> and
-        <span class="text-enhancer">four</span> respectively. The Objects approach suits so far since
-        we have all three instances having different states but same <b>behaviour</b> of <b>movement</b>.
-        Now lets say all three have different <span class="text-enhancer">turning radius</span>.
-        Its also a state of the object hence we can define that as an instance variable.
-        Hence we can still go ahead with Single Class Multiple Objects approach.
-        So far its good !
-      </div>
-
-      <div class="justified-content">
-        <h4 class="page-subtitle-grey">Lets make things interesting</h4>
-        <div layout="row">
-          <div flex="50">
-            <img src="images/objects-vs-classes/interesting.jpg" alt="A small girl playing computer">
-            <div class="picture-credits-img">Created by rawpixel.com - www.freepik.com</div>
-          </div>
-          <div flex-offset="5" flex>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Doing a <span class="text-enhancer">wheelie</span> is possible in bikes only.
-            Now is the time to create a <b>separate class for the Bike</b> since its a behaviour specific to
-            bike and not to Cars and Auto-Rickshaw. Hence a rule of thumb is to start with
-            <span class="text-enhancer">Generalization</span> then go towards <span class=text-enhancer>
-              Specialization</span>. It helps in <span class="text-enhancer">Agile Modelling</span> since we
-              gradually model the details based on our knowledge of the entities. Most of the projects start
-              with little information and slowly evolve when more details are available. Going with top down
-              approach is good here since we can have clear abstraction of our software.
-              Now we have a <b>Vehicle class to instantiate Car and Auto-Rickshaw</b> and a
-              <span class="text-enhancer">Bike class</span> to instatiate Bike Object.
-          </div>
-        </div>
-
-      </div>
-
-      <div class="justified-content">
-        <h4 class="page-subtitle-grey">Deep Dive Further</h4>
-        <div layout="row">
-          <div flex="60">
-            Lets understand the fact of <b>safety precautions of a rider</b>. Ideally the behaviour to enable
-            safety precuations of a rider is different for a Car and Bike. A <span class="text-enhancer">Bike</span>
-            rider should wear a <span class="text-enhancer">Helmet</span> and <span class="text-enhancer">Car</span>
-            driver should wear <span class="text-enhancer">Seat Belts</span>. ( Note : We are taking a single
-            precaution example here to understand the concept. There may be other precautionary measures ).
-            Now is the time to create a <b>separate class for Car</b> as well since the safety precautions
-            enablement is different for Car and Bike. We can still use the <span class="text-enhancer">Vehicle class</span>
-             <b>to instantiate Auto-Rickshaw Object</b> since so far they don’t have any specific safety precautions
-             for the driver. ( Note : Its under discussion and implementation to have safety features and precautions
-              for the Auto-Rickshaw driver ). The current classes we have is : Vehicle, Bike and Car which are used
-              as :
-              Vehicle class to instantiate <span class="text-enhancer">Auto-Rickshaw Object</span>,
-              Bike class to instantiate <span class="text-enhancer">Bike Object</span> and
-              Car class to instantiate <span class="text-enhancer">Car Object</span>.
-              We still cannot have a abstract method in the parent class Vehicle to enableSafetyPrecautions
-              since its not available for Auto-Rickshaw object.
-          </div>
-          <div flex-offset="10" flex>
-            <img width="100%" src="images/objects-vs-classes/deep-dive.jpg" alt="Scuba Diver">
-            <div class="picture-credits"><a href="https://www.freepik.com/free-photos-vectors/background">Created by brgfx - www.freepik.com</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="justified-content">
-        <h3 class="page-subtitle">Class Modelling</h3>
-        <img style="border-radius:5px" src="images/objects-vs-classes/models/Vehicle.png" alt="Vehicle Class">
-        <img style="border-radius:5px" src="images/objects-vs-classes/models/Car.png" alt="Car Class">
-        <img style="border-radius:5px" src="images/objects-vs-classes/models/Bike.png" alt="Bike Class">
-        <div align="center">
-          <img style="border-radius:5px" src="images/objects-vs-classes/models/DemoRunner.png" alt="Demo Runner Class">
-        </div>
-      </div>
-
-
-      <div class="justified-content">
-        <h3 class="page-subtitle">Summary</h3>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Always follow the <span class="text-enhancer">Generalization to Specialization</span> approach
-        <span class="text-enhancer">( TOP-DOWN )</span> for <span class="text-enhancer">Agile Modelling</span>. Deciding factor for going with classes or objects is
-        whether something can be modelled as a state or a behaviour. Dictionary meaning of <span class="text-enhancer">State</span>
-        is particular condition something has at that instant. Its a constant thing at that instant.
-        <span class="text-enhancer">Behaviour</span> means to do something.
-      </div>
+    <div>
+      <img class="round-corner blog-image" src="images/objects-vs-classes/auto-rickshaw.jpg" alt="Auto-Rickshaw">
+      <br /><span style="font-size: 15px;font-weight: 400;">Auto-Rickshaw</span>
     </div>
+    <div>
+      <img class="round-corner blog-image" src="images/objects-vs-classes/car.jpg" alt="Car">
+      <br /><span style="font-size: 15px;font-weight: 400;">Car</span>
+    </div>
+  </div>
+  <h4 class="page-subtitle-h4">Single Class Multiple Instances</h4>
+  <p class="justified-content">
+    Model all three using a <span class="text-enhancer">non-abstract Vehicle</span> class and
+    have <b>noOfWheels value as a state</b> which will enable us to create three different
+    instances which are identified based on the number of wheels
+  </p>
+  <h4 class="page-subtitle-h4">Separate Classes</h4>
+  <div class="justified-content">
+    Separate classes for all three types with a single <span class="text-enhancer">abstract parent class
+      Vehicle</span>
+    having noOfWheels
+    as a <span class="text-enhancer">Protected field</span> which will be inherited by the child Classes.
+    <br clear="both" /><br clear="both" />
+  </div>
+  <div class="justified-content">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Let's go with <b>Single Class Multiple Instances Approach</b>. Suppose we create on
+    instance of
+    Vehicle class with noOfWheels as <span class="text-enhancer">two</span>, then its an instance of
+    <span class="text-enhancer">Bike</span>. Similarly for <span class="text-enhancer">Auto-Rickshaw</span>
+    and <span class="text-enhancer">Car</span> we can have value of
+    noOfWheels instance variable as <span class="text-enhancer">three</span> and
+    <span class="text-enhancer">four</span> respectively. The Objects approach suits so far since
+    we have all three instances having different states but same <b>behaviour</b> of <b>movement</b>.
+    Now lets say all three have different <span class="text-enhancer">turning radius</span>.
+    Its also a state of the object hence we can define that as an instance variable.
+    Hence we can still go ahead with Single Class Multiple Objects approach.
+    So far its good !
+  </div>
+  <h4 class="page-subtitle-grey">Lets make things interesting</h4>
+  <div style="text-align: center;" class="justified-content blog-image-single">
+    <img src="images/objects-vs-classes/interesting.jpg" alt="A small girl playing computer">
+    <div class="picture-credits-img">Created by rawpixel.com - www.freepik.com</div>
+  </div>
+  <div class="justified-content">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Doing a <span class="text-enhancer">wheelie</span> is possible in bikes only.
+    Now is the time to create a <b>separate class for the Bike</b> since its a behaviour specific to
+    bike and not to Cars and Auto-Rickshaw. Hence a rule of thumb is to start with
+    <span class="text-enhancer">Generalization</span> then go towards <span class=text-enhancer>
+      Specialization</span>. It helps in <span class="text-enhancer">Agile Modelling</span> since we
+    gradually model the details based on our knowledge of the entities. Most of the projects start
+    with little information and slowly evolve when more details are available. Going with top down
+    approach is good here since we can have clear abstraction of our software.
+    Now we have a <b>Vehicle class to instantiate Car and Auto-Rickshaw</b> and a
+    <span class="text-enhancer">Bike class</span> to instatiate Bike Object.
+  </div>
+  <h4 class="page-subtitle-grey">Deep Dive Further</h4>
+  <div style="text-align: center;" class="justified-content blog-image-single">
+    <img width="100%" src="images/objects-vs-classes/deep-dive.jpg" alt="Scuba Diver">
+    <div class="picture-credits"><a href="https://www.freepik.com/free-photos-vectors/background">Created by brgfx
+        - www.freepik.com</a></div>
+  </div>
+  <div class="justified-content">
+    Lets understand the fact of <b>safety precautions of a rider</b>. Ideally the behaviour to enable
+    safety precuations of a rider is different for a Car and Bike. A <span class="text-enhancer">Bike</span>
+    rider should wear a <span class="text-enhancer">Helmet</span> and <span class="text-enhancer">Car</span>
+    driver should wear <span class="text-enhancer">Seat Belts</span>. ( Note : We are taking a single
+    precaution example here to understand the concept. There may be other precautionary measures ).
+    Now is the time to create a <b>separate class for Car</b> as well since the safety precautions
+    enablement is different for Car and Bike. We can still use the <span class="text-enhancer">Vehicle
+      class</span>
+    <b>to instantiate Auto-Rickshaw Object</b> since so far they don’t have any specific safety precautions
+    for the driver. ( Note : Its under discussion and implementation to have safety features and precautions
+    for the Auto-Rickshaw driver ). The current classes we have is : Vehicle, Bike and Car which are used
+    as :
+  </div>
+  <div class="justified-content">
+    Vehicle class to instantiate <span class="text-enhancer">Auto-Rickshaw Object</span>,
+    Bike class to instantiate <span class="text-enhancer">Bike Object</span> and
+    Car class to instantiate <span class="text-enhancer">Car Object</span>.
+    We still cannot have a abstract method in the parent class Vehicle to enableSafetyPrecautions
+    since its not available for Auto-Rickshaw object.
+  </div>
+
+
+
+  <h3 class="page-subtitle">Class Modelling</h3>
+  <div class="blog-images-list">
+    <div>
+      <img class="round-corner blog-image" src="images/objects-vs-classes/models/Vehicle.png" alt="Vehicle">
+      <br /><span style="font-size: 15px;font-weight: 400;">Vehicle</span>
+    </div>
+    <div>
+      <img class="round-corner blog-image" src="images/objects-vs-classes/models/Car.png" alt="Car">
+      <br /><span style="font-size: 15px;font-weight: 400;">Car</span>
+    </div>
+    <div>
+      <img class="round-corner blog-image" src="images/objects-vs-classes/models/Bike.png" alt="Bike">
+      <br /><span style="font-size: 15px;font-weight: 400;">Bike</span>
+    </div>
+    <div>
+      <img class="round-corner blog-image" src="images/objects-vs-classes/models/DemoRunner.png" alt="DemoRunner">
+      <br /><span style="font-size: 15px;font-weight: 400;">Demo Runner Class</span>
+    </div>
+  </div>
+
+  <h3 class="page-subtitle">Summary</h3>
+
+  <div class="justified-content">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Always follow the <span class="text-enhancer">Generalization to
+      Specialization</span> approach
+    <span class="text-enhancer">( TOP-DOWN )</span> for <span class="text-enhancer">Agile Modelling</span>. Deciding
+    factor for going with classes or objects is
+    whether something can be modelled as a state or a behaviour. Dictionary meaning of <span
+      class="text-enhancer">State</span>
+    is particular condition something has at that instant. Its a constant thing at that instant.
+    <span class="text-enhancer">Behaviour</span> means to do something.
+  </div>
+
 </div>
