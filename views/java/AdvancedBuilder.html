@@ -1,0 +1,140 @@
+<div class="content-area">
+    <div align="center">
+        <h2 class="page-title">Advanced Builder</h2>
+        <h4 class="sub-heading">Higher Order Functions</h4>
+        <img class="round-corner blog-image" src="images/java/BuildingConstruction.jpg" alt="">
+        <div class="picture-credits-dark">Background vector created by freepik - www.freepik.com</div>
+    </div>
+    <div style="font-style: italic;width: 80%;text-justify: auto;margin-left: 10%;text-align: center;">
+        Disclaimer : The content of this blog are my views and understanding of the topic. I do not intend to demean
+        anything or anyone. I am only trying to share my views on the topic so that you will get a different thought
+        process and angle to look at this topic.
+    </div>
+    <h3 class="page-subtitle">Introduction</h3>
+    <p class="justified-content">
+        Java 8 introduced Functional Programming using Lambdas which enables us to externalize the behaviour (i.e. a
+        function) which now can be passed as an argument to another function. Looks simple but its a very powerful
+        feature. I was fascinated by this idea and wanted to experiment with it. My experimentation is always based on
+        what language restrictions are and how far can I reach based on my skills, knowledge and creativity. I
+        created something called an Advanced Builder using this. Lets explore how.
+    </p>
+    <p class="justified-content">
+        We all know that a Builder solves the problem of a telescopic constructor while instantiating an object. In case
+        of constructor with many arguments its difficult to read quickly which argument is to be passed in which
+        position. IDE tools now-a-days are smart enough to show in the code the parameter names but still there are
+        certain cases when they don't show them. My observation is that they show the parameter names as far as we pass
+        actual values as arguments and not a method call as direct argument. Please see the screenshot below :
+    </p>
+
+    <div style="text-align: center;" class="justified-content blog-image-single">
+        <img class="round-corner" width="25%" src="images/java/advanced-builder/IdeaParameterNameShown.png"
+            alt="Parameter Name shown by Idea">
+        <br /><span style="font-size: 15px;font-weight: 400;">Parameter Name shown by Idea</span>
+    </div>
+
+    <p class="justified-content">
+        How to solve this problem using Java 8 Lambda and create a builder using the same. Check below code and lets
+        discuss more on this.
+    </p>
+    <div class="blog-images-list">
+        <div>
+            <img class="round-corner blog-image" src="images/java/advanced-builder/AdvancedBuilderMutableObject.png"
+                alt="Advanced Builder Mutable Object">
+            <br /><span style="font-size: 15px;font-weight: 400;">Advanced Builder Mutable Object</span>
+        </div>
+        <div>
+            <img class="round-corner blog-image" src="images/java/advanced-builder/AdvancedBuilderMutableObjectDemo.png"
+                alt="Advanced Builder Mutable Object Demo">
+            <br /><span style="font-size: 15px;font-weight: 400;">Advanced Builder Mutable Object Demo</span>
+        </div>
+    </div>
+
+    <br clear="both" />
+    <p class="justified-content">
+        Below are some points to be noted on this :
+    </p>
+    <h3 class="page-subtitle">PROS</h3>
+
+    <ul>
+        <li>Object can be constructed in various ways</li>
+        <li>Object building logic is externalized using a Consumer Lambda</li>
+        <li>The code is readable when we are building an Object as we know which particular setter method is invoked
+        </li>
+        <li>Single constructor for all the different ways of object creation</li>
+    </ul>
+
+    <h3 class="page-subtitle">CONS</h3>
+
+    <ul>
+        <li>Cannot create Immutable objects using this approach</li>
+    </ul>
+
+    <p class="justified-content">
+        Then I recollected that a friend of mine once wrote a beautiful blog on <a
+            href="https://medium.com/beingprofessional/think-functional-advanced-builder-pattern-using-lambda-284714b85ed5">Advanced
+            Builder Pattern using Lambda</a>. In
+        his approach he used an externalized Builder. I am using the same approach in a different way. I used an
+        Inner Builder Class to achieve the Immutability.
+    </p>
+
+    <div style="text-align: center;" class="justified-content blog-image-single">
+        <img class="round-corner" width="25%" src="images/java/advanced-builder/AdvancedBuilderImmutableObject.jpg"
+            alt="Advanced Builder Immutable Object">
+        <br /><span style="font-size: 15px;font-weight: 400;">Advanced Builder Immutable Object</span>
+    </div>
+    <div style="text-align: center;" class="justified-content blog-image-single">
+        <img class="round-corner" width="25%" src="images/java/advanced-builder/DemoOutput.jpg" alt="Demo Output">
+        <br /><span style="font-size: 15px;font-weight: 400;">Demo Output</span>
+    </div>
+
+    <h3 class="page-subtitle">Structural Analysis</h3>
+
+    <p class="justified-content">
+        Structural analysis of the above class reveals :
+    </p>
+    <ul>
+        <li>Both Customer and Bulider class have <b>private constructor.</b> Which means we cannot instantiate them
+            directly</li>
+        <li>We can create, only Immutable objects of Customer with the help of the Inner Builder Class</li>
+        <li>The <b>with</b> method in the builder class accepts a <b>Consumer</b> which is telling the builder
+            how to build the objects of Customer</li>
+        <li><b>build</b> method inside the Builder class is <b>private</b> which means we cannot invoke it directly and
+            Builder has clearly defined the invocation order in the <b>with</b> method</li>
+        <li>The lifespan of the builder object is limited to instantion of <b>Customer</b> based on the states defined
+            by <b>Consumer</b></li>
+    </ul>
+    <p class="justified-content">
+        In simple words we are telling the builder what are the states of the Customer instance which we need to
+        build it with. It takes that and applies it and generates an instance of Customer and returns it back. Now we
+        can create Immutable Objects of Customer with much more readable code.
+    </p>
+
+    <div class="blog-images-list">
+        <div>
+            <img class="round-corner blog-image" src="images/java/advanced-builder/FinalAdvancedBuilderDemo.png"
+                alt="Final Advanced Builder Demo">
+            <br /><span style="font-size: 15px;font-weight: 400;">Final Advanced Builder Demo</span>
+        </div>
+        <div>
+            <img class="round-corner blog-image" src="images/java/advanced-builder/DemoOutput.jpg" alt="Demo Output">
+            <br /><span style="font-size: 15px;font-weight: 400;">Demo Output</span>
+        </div>
+    </div>
+
+
+    <h3 class="page-subtitle">Summary</h3>
+    <p class="justified-content">
+        Java 8 Lambdas are an addition to the freedom provided to Developers by Java. We can create smarter code and
+        make it more Readable, Reusable and AGILE. I tried experimenting so far to create this Advanced Builder but I am
+        trying to achieve is how can we get rid of this Inner Builder class and have the single constructor in the
+        original class and create Immutable Objects.
+    </p>
+
+    <div style="text-align: center;" class="justified-content blog-image-single">
+        <img class="round-corner" width="25%" src="images/design-pattern-is-fish/KeepThinking.jpeg"
+            alt="FormattableMessage">
+        <br />
+        <h3>KEEP THINKING !</h3>
+    </div>
+
+</div>

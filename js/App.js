@@ -17,6 +17,9 @@ app.config(['$routeProvider', function ($routeProvider) {
   }).when('/research', {
     templateUrl: 'views/research/ResearchHome.html',
     controller: 'ResearchHomeController'
+  }).when('/java/advanced-builder', {
+    templateUrl: 'views/java/AdvancedBuilder.html',
+    controller: 'ScrollToTopController'
   }).when('/java/data-types', {
     templateUrl: 'views/java/DataTypes.html',
     controller: 'ScrollToTopController'

@@ -168,7 +168,7 @@ footer div {
 .picture-credits-small {
   font-size: 8px;
   position: relative;
-  bottom: 25px;
+  bottom: 18px;
   text-align: center;
   color: black;
 }
@@ -240,10 +240,11 @@ ul.circle {
 }
 
 .topic-card {
-  width: 22%;
+  max-width: 30% !important;
+  min-width: 30% !important;
   float: left;
   margin-bottom: 5%;
-  height: 300px;
+  height: 320px;
   text-align: center;
 }
 
@@ -252,11 +253,17 @@ ul.circle {
 }
 
 .topic-card-title {
+  font-size: 15px;
   margin-bottom: 5%;
 }
 
 .card-media {
-  margin-left: 17%;
+  margin-left: 25%;
+  padding-bottom: 5%;
+}
+
+.card-media img {
+  width: 100%;
 }
 
 .final-class-green {

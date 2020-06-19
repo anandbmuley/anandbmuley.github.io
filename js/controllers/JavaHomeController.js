@@ -3,6 +3,13 @@ app.controller('JavaHomeController', ['$scope', '$location',
 
     $scope.topics = [
       {
+        'heading': 'Advanced Builder',
+        'subHeading': 'Higher Order Functions',
+        'imageUrl': 'java/BuildingConstruction.jpg',
+        'route': '/java/advanced-builder',
+        'imageCredits': 'Created by Freepik - Freepik.com'
+      },
+      {
         'heading': 'Object Oriented Design',
         'subHeading': 'Thinking in terms of objects',
         'imageUrl': 'object_oriented.jpg',
