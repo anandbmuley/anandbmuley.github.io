@@ -3,6 +3,13 @@ app.controller('JavaHomeController', ['$scope', '$location',
 
     $scope.topics = [
       {
+        'heading': 'Hiding badly Designed MicroService',
+        'subHeading': 'Worst reality of MicroServices',
+        'imageUrl': 'java/OldWoodenHouse.jpg',
+        'route': '/java/hiding-badly-designed-microservice',
+        'imageCredits': 'Created by brgfx - Freepik.com'
+      },
+      {
         'heading': 'Advanced Builder',
         'subHeading': 'Higher Order Functions',
         'imageUrl': 'java/BuildingConstruction.jpg',

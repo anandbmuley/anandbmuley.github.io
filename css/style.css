@@ -354,3 +354,33 @@ nav>ul {
     width: 100%;
   }
 }
+
+.rest-api-endpoints {
+  border: solid 1px rgb(154, 158, 154);
+  border-radius: 5px;
+  list-style: none;
+  padding-bottom: 3%;
+  padding-right: 5%;
+  width: fit-content;
+  text-align: left;
+}
+
+.api-method-post {
+  color: #49cc90;
+  font-weight: 600;
+}
+
+.api-method-get {
+  color: #61affe;
+  font-weight: 600;
+}
+
+.api-method-put {
+  color: #fca130;
+  font-weight: 600;
+}
+
+.api-url {
+  margin-left: 2%;
+  font-weight: 400;
+}
