@@ -20,9 +20,6 @@ app.config(['$routeProvider', function ($routeProvider) {
   }).when('/java/advanced-builder', {
     templateUrl: 'views/java/AdvancedBuilder.html',
     controller: 'ScrollToTopController'
-  }).when('/java/hiding-badly-designed-microservice', {
-    templateUrl: 'views/java/HidingBadlyDesignedMicroService.html',
-    controller: 'ScrollToTopController'
   }).when('/java/data-types', {
     templateUrl: 'views/java/DataTypes.html',
     controller: 'ScrollToTopController'
