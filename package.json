@@ -1,18 +1,19 @@
 {
   "name": "anandbmuley.github.io",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Applied Technology",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "http-server ."
+    "start": "http-server ."
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anandbmuley/anandbmuley.github.io.git"
   },
   "keywords": [
-    "Tutorial"
+    "Blog",
+    "Tech Blog"
   ],
   "author": "Anand B. Muley",
   "license": "ISC",
